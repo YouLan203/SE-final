@@ -23,7 +23,7 @@ public class Lesson {
 		this.list = list;
 	}
 	
-	public boolean buildLessonFile() { //å»ºæª”_OK
+	public boolean buildLessonFile() { //«ØÀÉ_OK
 		try {
 			String folderName = this.year;
 			File newFolder = new File("C:\\StudentGradeSystem\\LessonFile\\" + folderName);
@@ -57,7 +57,7 @@ public class Lesson {
 		}
 	}
 	
-	public boolean changeLessonFile() { //ä¿®æ”¹è³‡æ–™_ä¸å«èª²ç¨‹åç¨±
+	public boolean changeLessonFile() { //­×§ï¸ê®Æ_¤£§t½Òµ{¦WºÙ
 		String fileName = this.lessonName;
 		String folderName = this.year;
 		String path = "C:\\StudentGradeSystem\\LessonFile\\" + folderName + "\\" + fileName + ".txt";
@@ -85,7 +85,7 @@ public class Lesson {
 		}
 	}
 	
-	public boolean changeLessonProName(String newName) { //ä¿®æ”¹èª²ç¨‹æ•™æˆåç¨±
+	public boolean changeLessonProName(String newName) { //­×§ï½Òµ{±Ğ±Â¦WºÙ
 		Professor Newpro = new Manager(" "," ", " ").readProFile(newName);
 		if (Newpro == null) {
 			return false;
@@ -95,7 +95,7 @@ public class Lesson {
 		ArrayList<String> place = new ArrayList<String>();
 		for (int i = 0; i < Oldpro.lesson.size(); i++) {
 			ArrayList<String> getData = Oldpro.lesson.get(i);
-			if (getData.get(0).equals(year)) {
+			if (getData.get(0).equals(this.year)) {
 				place = getData;
 				break;
 			}
@@ -123,17 +123,25 @@ public class Lesson {
 		ArrayList<String> placeNew = new ArrayList<String>();
 		for (int i = 0; i < Newpro.lesson.size(); i++) {
 			ArrayList<String> getDataNew = Newpro.lesson.get(i);
-			if (getDataNew.get(0).equals(year)) {
+			if (getDataNew.get(0).equals(lesson.year)) {
 				placeNew = getDataNew;
 				break;
 			}
 		}
-		int lessonIndexNew = Newpro.lesson.indexOf(place);
-		Newpro.lesson.get(lessonIndex).add(lessonName);
-		return Newpro.changeFile();
+		int lessonIndexNew = Newpro.lesson.indexOf(placeNew);
+		if (lessonIndexNew == -1) {
+			placeNew.add(lesson.year);
+			placeNew.add(lesson.lessonName);
+			Newpro.lesson.add(placeNew);
+			return Newpro.changeFile();
+		}
+		else {
+			Newpro.lesson.get(lessonIndexNew).add(lesson.lessonName);
+			return Newpro.changeFile();
+		}
 	}
 	
-	public boolean changeLessonName(String newName) { //ä¿®æ”¹èª²ç¨‹åç¨±_OK
+	public boolean changeLessonName(String newName) { //­×§ï½Òµ{¦WºÙ_OK
 		String pathNew = "C:\\StudentGradeSystem\\LessonFile\\" + this.year + "\\" + newName + ".txt";
 		File ready = new File (pathNew);
 		if (ready.exists()) {
@@ -159,13 +167,13 @@ public class Lesson {
 			for (int i = 0; i < stu.lesson.size(); i++) {
 				ArrayList<String> getDataStu = stu.lesson.get(i);
 				if (getDataStu.get(0).equals(year)) {
-					place = getDataStu;
+					placeStu = getDataStu;
 					break;
 				}
 			}
 			int lessonIndexStu = stu.lesson.indexOf(placeStu);
-			stu.lesson.get(lessonIndex).remove(this.lessonName);
-			stu.lesson.get(lessonIndex).add(newName);
+			stu.lesson.get(lessonIndexStu).remove(this.lessonName);
+			stu.lesson.get(lessonIndexStu).add(newName);
 			stu.changeFile();
 		}
 		
@@ -178,15 +186,44 @@ public class Lesson {
 		return this.buildLessonFile();
 	}
 	
-	public boolean deleteLessonFile() { //åˆªé™¤èª²ç¨‹_OK
+	public boolean deleteLessonFile() { //§R°£½Òµ{_¥¼¥[¤J²¾°£±Ğ±Â¡ş¾Ç¥Íªº³¡¤À
 		String fileName = this.lessonName;
 		String folderName = this.year;
 		String path = "C:\\StudentGradeSystem\\LessonFile\\" + folderName + "\\" + fileName + ".txt";
 		File newFile = new File(path);
+		
+		Professor pro = new Manager("","","").readProFile(this.professorName);
+		ArrayList<String> place = new ArrayList<String>();
+		for (int i = 0; i < pro.lesson.size(); i++) {
+			ArrayList<String> getData = pro.lesson.get(i);
+			if (getData.get(0).equals(year)) {
+				place = getData;
+				break;
+			}
+		}
+		int lessonIndex = pro.lesson.indexOf(place);
+		pro.lesson.get(lessonIndex).remove(this.lessonName);
+		pro.changeFile();
+		
+		for(int j = 0; j < this.list.size(); j++) {
+			Student stu = new Manager("","","").readStuFile(this.list.get(j).name);
+			ArrayList<String> placeStu = new ArrayList<String>();
+			for (int i = 0; i < stu.lesson.size(); i++) {
+				ArrayList<String> getDataStu = stu.lesson.get(i);
+				if (getDataStu.get(0).equals(year)) {
+					placeStu = getDataStu;
+					break;
+				}
+			}
+			int lessonIndexStu = stu.lesson.indexOf(placeStu);
+			stu.lesson.get(lessonIndexStu).remove(this.lessonName);
+			stu.changeFile();
+		}
+		
 		return newFile.delete();
 	}
 	
-	public void deleteStudentData(String name) { //ç§»é™¤å­¸ç”Ÿè³‡æ–™
+	public void deleteStudentData(String name) { //²¾°£¾Ç¥Í¸ê®Æ
 		ArrayList<StudentGrade> list = this.list;
 		int place = list.indexOf(new StudentGrade(name, ""));
 		list.remove(list.get(place));
@@ -194,30 +231,14 @@ public class Lesson {
 		this.changeLessonFile();
 	}
 	
-	public void viewFile() { //å¾…ä¾GUIé€²è¡Œæ›´æ”¹
-		String word =   this.lessonName + "\n" +
-						this.professorName + "\n" +
-						this.year + "\n" +
-						this.num + "\n" +
-						this.word + "\n" +
-						this.type + "\n" +
-						this.point + "\n";
-		String arrayWord = "\n";
-		for (int i = 0; i < this.list.size(); i++) {
-			arrayWord += this.list.get(i).name + " ";
-			arrayWord += this.list.get(i).grade + "\n";
-		}
-		System.out.println(word + arrayWord);
-	}
-	
-	public String findStudentGrade(String name) { //æŸ¥çœ‹æˆç¸¾ï¼ˆä¾äººï¼‰_å¾…ä¾GUIä¿®æ”¹è¼¸å‡º
+	public String findStudentGrade(String name) { //¬d¬İ¦¨ÁZ¡]¨Ì¤H¡^_«İ¨ÌGUI­×§ï¿é¥X
 		ArrayList<StudentGrade> list = this.list;
 		int place = list.indexOf(new StudentGrade(name, ""));
 		String grade = list.get(place).name + " " + list.get(place).grade;
 		return grade;
 	}
 	
-	public String gradeAverage() { //è¨ˆç®—èª²ç¨‹ç¸½å¹³å‡_OK
+	public String gradeAverage() { //­pºâ½Òµ{Á`¥­§¡_OK
 		int sum = 0;
 		for (int i = 0; i < this.list.size(); i++) {
 			int add = Integer.parseInt(this.list.get(i).grade);
@@ -228,31 +249,31 @@ public class Lesson {
 		return grade;
 	}
 	
-	public String findGrade() { //æŸ¥çœ‹æˆç¸¾ï¼ˆä¾èª²ç¨‹ï¼‰_å¾…ä¾GUIä¿®æ”¹è¼¸å‡º
-		String grade = this.lessonName + "åå–®æˆç¸¾\n";
+	public String findGrade() { //¬d¬İ¦¨ÁZ¡]¨Ì½Òµ{¡^_«İ¨ÌGUI­×§ï¿é¥X
+		String grade = this.lessonName + "¦W³æ¦¨ÁZ\n";
 		for (int i = 0; i < this.list.size(); i++) {
 			String add = this.findStudentGrade(this.list.get(i).name);
 			grade += add + "\n";
 		}
 		if (this.list.size() != 0) {
-			grade += "ç¸½å¹³å‡ï¼š" + this.gradeAverage();
+			grade += "Á`¥­§¡¡G" + this.gradeAverage();
 		}
 		else {
-			grade += "ç¸½å¹³å‡ï¼š ï¼ï¼";
+			grade += "Á`¥­§¡¡G ¡Ğ¡Ğ";
 		}
 		return grade;
 	}
 	
-	public String printDate() { //æŸ¥çœ‹èª²ç¨‹è³‡è¨Š_å¾…ä¾GUIä¿®æ”¹
-		String word =   "\tèª²ç¨‹åç¨±ï¼š" + 
-						this.lessonName + "\n\tæˆèª²æ•™æˆï¼š" +
-						this.professorName + "\n\té–‹èª²å­¸æœŸï¼š" +
-						this.year + "\n\tèª²ç¨‹ä»£ç¢¼ï¼š" +
-						this.num + "\n\tèª²ç¨‹å¤§ç¶±ï¼š" +
-						this.word + "\n\té¸èª²é¡å‹ï¼š" +
-						this.type + "\n\t   å­¸åˆ†æ•¸ï¼š" +
+	public String printDate() { //¬d¬İ½Òµ{¸ê°T_«İ¨ÌGUI­×§ï
+		String word =   "\t½Òµ{¦WºÙ¡G" + 
+						this.lessonName + "\n\t±Â½Ò±Ğ±Â¡G" +
+						this.professorName + "\n\t¶}½Ò¾Ç´Á¡G" +
+						this.year + "\n\t½Òµ{¥N½X¡G" +
+						this.num + "\n\t½Òµ{¤jºõ¡G" +
+						this.word + "\n\t¿ï½ÒÃş«¬¡G" +
+						this.type + "\n\t   ¾Ç¤À¼Æ¡G" +
 						this.point + "\n";
-		String arrayWord = "\n\té¸èª²åå–®ï¼š\n\t";
+		String arrayWord = "\n\t¿ï½Ò¦W³æ¡G\n\t";
 		for (int i = 0; i < this.list.size(); i++) {
 			Student stu = new Manager(" ", " ", " ").readStuFile(this.list.get(i).name);
 			arrayWord += stu.account + " ";
@@ -262,7 +283,7 @@ public class Lesson {
 		return print;
 	}
 	
-	public void readFile(String year, String name) { //å°å…¥è³‡æ–™_OK
+	public void readFile(String year, String name) { //¾É¤J¸ê®Æ_OK
 		String fileName = name;
 		String folderName = year;
 		String path = "C:\\StudentGradeSystem\\LessonFile\\" + folderName + "\\" + fileName + ".txt";
