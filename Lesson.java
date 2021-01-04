@@ -31,6 +31,9 @@ public class Lesson {
 			String fileName = this.lessonName;
 			String path = "C:\\StudentGradeSystem\\LessonFile\\" + folderName + "\\" + fileName + ".txt";
 			File newFile = new File(path);
+			if (newFile.exists()) {
+				return false;
+			}
 			if (!newFile.exists()) {
 				newFile.createNewFile();
 			}
