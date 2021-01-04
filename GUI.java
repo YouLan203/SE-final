@@ -63,7 +63,7 @@ public class GUI extends JFrame{
 	private JPanel contentPane;
 	public GUI() {
 		
-		setTitle("°ª¿P¤j¾Ç¥Í¦¨ÁZºŞ²z¨t²Î");
+		setTitle("é«˜ç‡•å¤§å­¸ç”Ÿæˆç¸¾ç®¡ç†ç³»çµ±");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 691, 476);
 		contentPane = new JPanel();
@@ -72,58 +72,58 @@ public class GUI extends JFrame{
 		contentPane.setLayout(null);
 		contentPane.repaint();
 		
-		JLabel title = new JLabel("°ª¿P¤j¾Ç¥Í¦¨ÁZºŞ²z¨t²Î");
-		title.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 30));
+		JLabel title = new JLabel("é«˜ç‡•å¤§å­¸ç”Ÿæˆç¸¾ç®¡ç†ç³»çµ±");
+		title.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 30));
 		title.setBounds(120, 120, 339, 35);
 		contentPane.add(title);
 		title.repaint();
 		
-		JLabel account = new JLabel("±b¸¹¡G");
-		account.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+		JLabel account = new JLabel("å¸³è™Ÿï¼š");
+		account.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 		account.setBounds(120, 162, 71, 23);
 		contentPane.add(account);
 		account.repaint();
 		
-		JLabel password = new JLabel("±K½X¡G");
-		password.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+		JLabel password = new JLabel("å¯†ç¢¼ï¼š");
+		password.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 		password.setBounds(120, 200, 71, 23);
 		contentPane.add(password);
 		password.repaint();
 		
-		JLabel identity = new JLabel("¨­¤À¡G");
-		identity.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+		JLabel identity = new JLabel("èº«åˆ†ï¼š");
+		identity.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 		identity.setBounds(120, 236, 60, 23);
 		contentPane.add(identity);
 		identity.repaint();
 		
 		JTextField accountIn = new JTextField();
-		accountIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+		accountIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 		accountIn.setBounds(180, 162, 279, 24);
 		contentPane.add(accountIn);
 		accountIn.setColumns(10);
 		accountIn.repaint();
 		
 		JPasswordField passwordIn = new JPasswordField();
-		passwordIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+		passwordIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 		passwordIn.setBounds(180, 199, 279, 24);
 		contentPane.add(passwordIn);
 		passwordIn.repaint();
 		
 		String[] option = new String[4];
 		option[0] = " ";
-		option[1] = "ºŞ²z­û";
-		option[2] = "±Ğ±Â";
-		option[3] = "¾Ç¥Í";
+		option[1] = "ç®¡ç†å“¡";
+		option[2] = "æ•™æˆ";
+		option[3] = "å­¸ç”Ÿ";
 		JComboBox identityIn = new JComboBox(option);
-		identityIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+		identityIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 		identityIn.setBackground(SystemColor.controlHighlight);
 		identityIn.setBounds(180, 235, 279, 29);
 		contentPane.add(identityIn);
 		identityIn.repaint();
 		
-		JButton login = new JButton("µn¤J");
+		JButton login = new JButton("ç™»å…¥");
 		login.setBackground(SystemColor.controlHighlight);
-		login.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+		login.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 		login.setBounds(482, 160, 124, 63);
 		contentPane.add(login);
 		login.repaint();
@@ -168,11 +168,11 @@ public class GUI extends JFrame{
 			int identity = identityIN.getSelectedIndex();
 			String[] option = new String[4];
 			option[0] = " ";
-			option[1] = "ºŞ²z­û";
-			option[2] = "±Ğ±Â";
-			option[3] = "¾Ç¥Í";
+			option[1] = "ç®¡ç†å“¡";
+			option[2] = "æ•™æˆ";
+			option[3] = "å­¸ç”Ÿ";
 			
-			Account client = new Account(account, password, option[identity]); //«Ø¥ßAccountª«¥ó
+			Account client = new Account(account, password, option[identity]); //å»ºç«‹Accountç‰©ä»¶
 			boolean check = client.logIn();
 			
 			loginNoteGUI done = new loginNoteGUI();
@@ -196,47 +196,47 @@ public class GUI extends JFrame{
 				ViewPanel.setVisible(true);
 				ViewPanel.repaint();
 				
-				JLabel word_login = new JLabel("Åwªï¡I" + client.account + "¡G");
-				word_login.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel word_login = new JLabel("æ­¡è¿ï¼" + client.account + "ï¼š");
+				word_login.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				word_login.setBounds(15, 15, 639, 43);
 				menuPane.add(word_login);
 				word_login.repaint();
 				
-				JLabel menu = new JLabel("¥\¯à¿ï³æ");
-				menu.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel menu = new JLabel("åŠŸèƒ½é¸å–®");
+				menu.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				menu.setBounds(15, 63, 136, 23);
 				menuPane.add(menu);
 				menu.repaint();
 				
-				JButton accountManager = new JButton("±b¸¹ºŞ²z");
+				JButton accountManager = new JButton("å¸³è™Ÿç®¡ç†");
 				accountManager.setBackground(SystemColor.controlHighlight);
-				accountManager.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				accountManager.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				accountManager.setBounds(15, 101, 136, 31);
 				menuPane.add(accountManager);
 				accountManager.repaint();
 				AccountManager callMenu = new AccountManager(ViewPanel, client, identityIN);
 				accountManager.addActionListener(callMenu);
 				
-				JButton lessonManager = new JButton("½Òµ{ºŞ²z");
+				JButton lessonManager = new JButton("èª²ç¨‹ç®¡ç†");
 				lessonManager.setBackground(SystemColor.controlHighlight);
-				lessonManager.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				lessonManager.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				lessonManager.setBounds(15, 163, 136, 31);
 				menuPane.add(lessonManager);
 				lessonManager.repaint();
 				LessonManager lessonmenu = new LessonManager(ViewPanel, client, identityIN);
 				lessonManager.addActionListener(lessonmenu);
 				
-				JButton gradeManager = new JButton("¦¨ÁZºŞ²z");
+				JButton gradeManager = new JButton("æˆç¸¾ç®¡ç†");
 				gradeManager.setBackground(SystemColor.controlHighlight);
-				gradeManager.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				gradeManager.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				gradeManager.setBounds(15, 225, 136, 31);
 				menuPane.add(gradeManager);
 				gradeManager.repaint();
 				GradeManager grademenu = new GradeManager(ViewPanel, client, identityIN);
 				gradeManager.addActionListener(grademenu);
 				
-				JButton logout = new JButton("µn¥X");
-				logout.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton logout = new JButton("ç™»å‡º");
+				logout.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				logout.setBackground(SystemColor.controlHighlight);
 				logout.setBounds(24, 352, 118, 31);
 				menuPane.add(logout);
@@ -270,37 +270,37 @@ public class GUI extends JFrame{
 				int identity = identityIN.getSelectedIndex();
 				String[] option = new String[4];
 				option[0] = " ";
-				option[1] = "ºŞ²z­û";
-				option[2] = "±Ğ±Â";
-				option[3] = "¾Ç¥Í";
+				option[1] = "ç®¡ç†å“¡";
+				option[2] = "æ•™æˆ";
+				option[3] = "å­¸ç”Ÿ";
 				
 				if (client.identity.equals(option[1])) {
 					Manager user = (Manager)client.changeType(option[1]);
 					view.removeAll();
 					view.repaint();
 					
-					JButton passwordChange = new JButton("­×§ï±K½X");
+					JButton passwordChange = new JButton("ä¿®æ”¹å¯†ç¢¼");
 					passwordChange.setBackground(SystemColor.controlHighlight);
-					passwordChange.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					passwordChange.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					passwordChange.setBounds(176, 62, 153, 31);
 					view.add(passwordChange);
 					passwordChange.repaint();
 					ChangePasswordPanel ToChange = new ChangePasswordPanel(view, user);
 					passwordChange.addActionListener(ToChange);
 					
-					JButton accountManager = new JButton("ºŞ²z¥Î¤á±b¸¹");
+					JButton accountManager = new JButton("ç®¡ç†ç”¨æˆ¶å¸³è™Ÿ");
 					accountManager.setBackground(SystemColor.controlHighlight);
-					accountManager.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					accountManager.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					accountManager.setBounds(176, 136, 153, 31);
 					view.add(accountManager);
 					accountManager.repaint();
 					ManageAccountPanel ToManage = new ManageAccountPanel(view, user);
 					accountManager.addActionListener(ToManage);
 					
-					JButton deleteAccount = new JButton("§R°£±b¸¹");
+					JButton deleteAccount = new JButton("åˆªé™¤å¸³è™Ÿ");
 					deleteAccount.setBackground(SystemColor.controlHighlight);
 					deleteAccount.setForeground(Color.RED);
-					deleteAccount.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					deleteAccount.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					deleteAccount.setBounds(176, 210, 153, 31);
 					view.add(deleteAccount);
 					deleteAccount.repaint();
@@ -313,52 +313,52 @@ public class GUI extends JFrame{
 					view.removeAll();
 					view.repaint();
 					
-					JLabel changePasswordTitle = new JLabel("­×§ï±K½X");
-					changePasswordTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					JLabel changePasswordTitle = new JLabel("ä¿®æ”¹å¯†ç¢¼");
+					changePasswordTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					changePasswordTitle.setBounds(200, 58, 118, 23);
 					view.add(changePasswordTitle);
 					changePasswordTitle.repaint();
 					
-					JLabel oldOne = new JLabel("ÂÂ±K½X¡G");
-					oldOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel oldOne = new JLabel("èˆŠå¯†ç¢¼ï¼š");
+					oldOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					oldOne.setBounds(111, 103, 81, 23);
 					view.add(oldOne);
 					oldOne.repaint();
 					
-					JLabel newOne = new JLabel("·s±K½X¡G");
-					newOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel newOne = new JLabel("æ–°å¯†ç¢¼ï¼š");
+					newOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					newOne.setBounds(111, 141, 81, 23);
 					view.add(newOne);
 					newOne.repaint();
 					
-					JLabel lblNewLabel = new JLabel("½T»{·s±K½X¡G");
-					lblNewLabel.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel lblNewLabel = new JLabel("ç¢ºèªæ–°å¯†ç¢¼ï¼š");
+					lblNewLabel.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lblNewLabel.setBounds(70, 179, 127, 23);
 					view.add(lblNewLabel);
 					lblNewLabel.repaint();
 					
 					JTextField oldIn = new JTextField();
-					oldIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					oldIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					oldIn.setBounds(191, 104, 171, 24);
 					view.add(oldIn);
 					oldIn.setColumns(10);
 					oldIn.repaint();
 					
 					JPasswordField newIn = new JPasswordField();
-					newIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					newIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					newIn.setBounds(191, 142, 171, 24);
 					view.add(newIn);
 					newIn.repaint();
 					
 					JPasswordField checkNew = new JPasswordField();
-					checkNew.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					checkNew.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkNew.setBounds(191, 180, 171, 24);
 					view.add(checkNew);
 					checkNew.repaint();
 					
-					JButton changeIt = new JButton("½T»{­×§ï");
+					JButton changeIt = new JButton("ç¢ºèªä¿®æ”¹");
 					changeIt.setBackground(SystemColor.controlHighlight);
-					changeIt.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					changeIt.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					changeIt.setBounds(276, 221, 111, 31);
 					view.add(changeIt);
 					changeIt.repaint();
@@ -371,52 +371,52 @@ public class GUI extends JFrame{
 					view.removeAll();
 					view.repaint();
 					
-					JLabel changePasswordTitle = new JLabel("­×§ï±K½X");
-					changePasswordTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					JLabel changePasswordTitle = new JLabel("ä¿®æ”¹å¯†ç¢¼");
+					changePasswordTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					changePasswordTitle.setBounds(200, 58, 118, 23);
 					view.add(changePasswordTitle);
 					changePasswordTitle.repaint();
 					
-					JLabel oldOne = new JLabel("ÂÂ±K½X¡G");
-					oldOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel oldOne = new JLabel("èˆŠå¯†ç¢¼ï¼š");
+					oldOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					oldOne.setBounds(111, 103, 81, 23);
 					view.add(oldOne);
 					oldOne.repaint();
 					
-					JLabel newOne = new JLabel("·s±K½X¡G");
-					newOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel newOne = new JLabel("æ–°å¯†ç¢¼ï¼š");
+					newOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					newOne.setBounds(111, 141, 81, 23);
 					view.add(newOne);
 					newOne.repaint();
 					
-					JLabel lblNewLabel = new JLabel("½T»{·s±K½X¡G");
-					lblNewLabel.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel lblNewLabel = new JLabel("ç¢ºèªæ–°å¯†ç¢¼ï¼š");
+					lblNewLabel.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lblNewLabel.setBounds(70, 179, 127, 23);
 					view.add(lblNewLabel);
 					lblNewLabel.repaint();
 					
 					JTextField oldIn = new JTextField();
-					oldIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					oldIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					oldIn.setBounds(191, 104, 171, 24);
 					view.add(oldIn);
 					oldIn.setColumns(10);
 					oldIn.repaint();
 					
 					JPasswordField newIn = new JPasswordField();
-					newIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					newIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					newIn.setBounds(191, 142, 171, 24);
 					view.add(newIn);
 					newIn.repaint();
 					
 					JPasswordField checkNew = new JPasswordField();
-					checkNew.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					checkNew.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkNew.setBounds(191, 180, 171, 24);
 					view.add(checkNew);
 					checkNew.repaint();
 					
-					JButton changeIt = new JButton("½T»{­×§ï");
+					JButton changeIt = new JButton("ç¢ºèªä¿®æ”¹");
 					changeIt.setBackground(SystemColor.controlHighlight);
-					changeIt.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					changeIt.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					changeIt.setBounds(276, 221, 111, 31);
 					view.add(changeIt);
 					changeIt.repaint();
@@ -441,52 +441,52 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel changePasswordTitle = new JLabel("­×§ï±K½X");
-			changePasswordTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel changePasswordTitle = new JLabel("ä¿®æ”¹å¯†ç¢¼");
+			changePasswordTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			changePasswordTitle.setBounds(200, 58, 118, 23);
 			view.add(changePasswordTitle);
 			changePasswordTitle.repaint();
 			
-			JLabel oldOne = new JLabel("ÂÂ±K½X¡G");
-			oldOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel oldOne = new JLabel("èˆŠå¯†ç¢¼ï¼š");
+			oldOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			oldOne.setBounds(111, 103, 81, 23);
 			view.add(oldOne);
 			oldOne.repaint();
 			
-			JLabel newOne = new JLabel("·s±K½X¡G");
-			newOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel newOne = new JLabel("æ–°å¯†ç¢¼ï¼š");
+			newOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			newOne.setBounds(111, 141, 81, 23);
 			view.add(newOne);
 			newOne.repaint();
 			
-			JLabel lblNewLabel = new JLabel("½T»{·s±K½X¡G");
-			lblNewLabel.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel lblNewLabel = new JLabel("ç¢ºèªæ–°å¯†ç¢¼ï¼š");
+			lblNewLabel.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			lblNewLabel.setBounds(70, 179, 127, 23);
 			view.add(lblNewLabel);
 			lblNewLabel.repaint();
 			
 			JTextField oldIn = new JTextField();
-			oldIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			oldIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			oldIn.setBounds(191, 104, 171, 24);
 			view.add(oldIn);
 			oldIn.setColumns(10);
 			oldIn.repaint();
 			
 			JPasswordField newIn = new JPasswordField();
-			newIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newIn.setBounds(191, 142, 171, 24);
 			view.add(newIn);
 			newIn.repaint();
 			
 			JPasswordField checkNew = new JPasswordField();
-			checkNew.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			checkNew.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkNew.setBounds(191, 180, 171, 24);
 			view.add(checkNew);
 			checkNew.repaint();
 			
-			JButton changeIt = new JButton("½T»{­×§ï");
+			JButton changeIt = new JButton("ç¢ºèªä¿®æ”¹");
 			changeIt.setBackground(SystemColor.controlHighlight);
-			changeIt.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			changeIt.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			changeIt.setBounds(276, 221, 111, 31);
 			view.add(changeIt);
 			changeIt.repaint();
@@ -657,56 +657,56 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 			
-				JLabel ManagerAccountTitle = new JLabel("ºŞ²z¥Î¤á±b¸¹");
+				JLabel ManagerAccountTitle = new JLabel("ç®¡ç†ç”¨æˆ¶å¸³è™Ÿ");
 				ManagerAccountTitle.setForeground(Color.BLACK);
-				ManagerAccountTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				ManagerAccountTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				ManagerAccountTitle.setBounds(175, 50, 156, 23);
 				view.add(ManagerAccountTitle);
 				ManagerAccountTitle.repaint();
 				
-				JButton buildNewOne = new JButton("«Ø¥ß·s±b¸¹");
+				JButton buildNewOne = new JButton("å»ºç«‹æ–°å¸³è™Ÿ");
 				buildNewOne.setBackground(SystemColor.controlHighlight);
-				buildNewOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildNewOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildNewOne.setBounds(53, 229, 134, 31);
 				view.add(buildNewOne);
 				buildNewOne.repaint();
 				BuildAccountPanel ToBuild = new BuildAccountPanel(view, client);
 				buildNewOne.addActionListener(ToBuild);
 				
-				JLabel accountChoose = new JLabel("½Ğ¿é¤J±ı­×§ï¤§±b¸¹¡G");
-				accountChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JLabel accountChoose = new JLabel("è«‹è¼¸å…¥æ¬²ä¿®æ”¹ä¹‹å¸³è™Ÿï¼š");
+				accountChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				accountChoose.setBounds(53, 112, 188, 23);
 				view.add(accountChoose);
 				accountChoose.repaint();
 				
 				JTextField AccounttextField = new JTextField();
-				AccounttextField.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				AccounttextField.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				AccounttextField.setBounds(233, 110, 232, 31);
 				AccounttextField.setText("");
 				view.add(AccounttextField);
 				AccounttextField.setColumns(10);
 				AccounttextField.repaint();
 				
-				JLabel identity = new JLabel("½Ğ¿ï¾Ü­×§ï±b¸¹¤§¨­¤À¡G");
-				identity.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JLabel identity = new JLabel("è«‹é¸æ“‡ä¿®æ”¹å¸³è™Ÿä¹‹èº«åˆ†ï¼š");
+				identity.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				identity.setBounds(53, 170, 203, 23);
 				view.add(identity);
 				identity.repaint();
 				
 				String[] option_identity = new String[3];
 				option_identity[0] = " ";
-				option_identity[1] = "±Ğ±Â";
-				option_identity[2] = "¾Ç¥Í";
+				option_identity[1] = "æ•™æˆ";
+				option_identity[2] = "å­¸ç”Ÿ";
 				JComboBox IdentitycomboBox = new JComboBox(option_identity);
 				IdentitycomboBox.setBackground(SystemColor.controlHighlight);
-				IdentitycomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				IdentitycomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				IdentitycomboBox.setBounds(253, 167, 212, 29);
 				view.add(IdentitycomboBox);
 				IdentitycomboBox.repaint();
 				
-				JButton makeDelete = new JButton("§R°£");
+				JButton makeDelete = new JButton("åˆªé™¤");
 				makeDelete.setBackground(SystemColor.controlHighlight);
-				makeDelete.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				makeDelete.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				makeDelete.setForeground(Color.RED);
 				makeDelete.setBounds(197, 229, 111, 31);
 				view.add(makeDelete);
@@ -714,9 +714,9 @@ public class GUI extends JFrame{
 				DeleteAccount delete = new DeleteAccount(view, client, AccounttextField, IdentitycomboBox);
 				makeDelete.addActionListener(delete);
 				
-				JButton makeChange = new JButton("­×§ï");
+				JButton makeChange = new JButton("ä¿®æ”¹");
 				makeChange.setBackground(SystemColor.controlHighlight);
-				makeChange.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				makeChange.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				makeChange.setBounds(318, 229, 111, 31);
 				view.add(makeChange);
 				makeChange.repaint();
@@ -740,14 +740,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 		
-			JLabel buildAccountPanelTitle = new JLabel("«Ø¥ß·s±b¸¹");
-			buildAccountPanelTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel buildAccountPanelTitle = new JLabel("å»ºç«‹æ–°å¸³è™Ÿ");
+			buildAccountPanelTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			buildAccountPanelTitle.setBounds(189, 16, 132, 23);
 			view.add(buildAccountPanelTitle);
 			buildAccountPanelTitle.repaint();
 			
-			JButton back = new JButton("¦^¤W¤@­¶");
-			back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton back = new JButton("å›ä¸Šä¸€é ");
+			back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			back.setBackground(SystemColor.controlHighlight);
 			back.setBounds(106, 268, 111, 31);
 			view.add(back);
@@ -755,61 +755,61 @@ public class GUI extends JFrame{
 			ManageAccountPanel ToManage = new ManageAccountPanel(view, client);
 			back.addActionListener(ToManage);
 			
-			JLabel choose = new JLabel("½Ğ¿ï¾Ü±b¸¹ºØÃş¡G");
-			choose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel choose = new JLabel("è«‹é¸æ“‡å¸³è™Ÿç¨®é¡ï¼š");
+			choose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			choose.setBounds(49, 55, 177, 23);
 			view.add(choose);
 			choose.repaint();
 			
 			String[] option = new String[4];
 			option[0] = " ";
-			option[1] = "ºŞ²z­û";
-			option[2] = "±Ğ±Â";
-			option[3] = "¾Ç¥Í";
+			option[1] = "ç®¡ç†å“¡";
+			option[2] = "æ•™æˆ";
+			option[3] = "å­¸ç”Ÿ";
 			JComboBox AccountKind = new JComboBox(option);
 			AccountKind.setBackground(SystemColor.controlHighlight);
-			AccountKind.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			AccountKind.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			AccountKind.setBounds(210, 54, 230, 29);
 			view.add(AccountKind);
 			AccountKind.repaint();
-			JLabel AccountSet = new JLabel("³]©w±b¸¹¡G");
-			AccountSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel AccountSet = new JLabel("è¨­å®šå¸³è™Ÿï¼š");
+			AccountSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			AccountSet.setBounds(106, 117, 111, 23);
 			view.add(AccountSet);
 			
 			JTextField newAccountSet = new JTextField();
-			newAccountSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newAccountSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newAccountSet.setBounds(210, 116, 230, 24);
 			view.add(newAccountSet);
 			newAccountSet.setColumns(10);
 			newAccountSet.repaint();
 			
-			JLabel PasswordSet = new JLabel("³]©w±K½X¡G");
-			PasswordSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel PasswordSet = new JLabel("è¨­å®šå¯†ç¢¼ï¼š");
+			PasswordSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			PasswordSet.setBounds(106, 160, 111, 23);
 			view.add(PasswordSet);
 			PasswordSet.repaint();
 			
 			JPasswordField newPasswordSet = new JPasswordField();
-			newPasswordSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newPasswordSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newPasswordSet.setBounds(210, 159, 230, 24);
 			view.add(newPasswordSet);
 			newPasswordSet.repaint();
 			
-			JLabel PasswordCheck = new JLabel("½T»{±K½X¡G");
-			PasswordCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel PasswordCheck = new JLabel("ç¢ºèªå¯†ç¢¼ï¼š");
+			PasswordCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			PasswordCheck.setBounds(106, 203, 111, 23);
 			view.add(PasswordCheck);
 			PasswordCheck.repaint();
 			
 			JPasswordField newPasswordCheck = new JPasswordField();
-			newPasswordCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newPasswordCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newPasswordCheck.setBounds(210, 202, 230, 24);
 			view.add(newPasswordCheck);
 			newPasswordCheck.repaint();
 			
-			JButton setNewAccount = new JButton("«Ø¥ß");
-			setNewAccount.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton setNewAccount = new JButton("å»ºç«‹");
+			setNewAccount.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			setNewAccount.setBackground(SystemColor.controlHighlight);
 			setNewAccount.setBounds(280, 268, 111, 31);
 			view.add(setNewAccount);
@@ -855,9 +855,9 @@ public class GUI extends JFrame{
 				
 				String[] option = new String[4];
 				option[0] = " ";
-				option[1] = "ºŞ²z­û";
-				option[2] = "±Ğ±Â";
-				option[3] = "¾Ç¥Í";
+				option[1] = "ç®¡ç†å“¡";
+				option[2] = "æ•™æˆ";
+				option[3] = "å­¸ç”Ÿ";
 				
 				File checkFile = new File("C:\\StudentGradeSystem\\AccountFile\\" + AccountSetIT + ".txt");
 				if (checkFile.exists()) {
@@ -883,27 +883,27 @@ public class GUI extends JFrame{
 						view.removeAll();
 						view.repaint();
 						
-						JLabel setAccountPanelTitle = new JLabel("³]©w±b¸¹¸ê°T");
-						setAccountPanelTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+						JLabel setAccountPanelTitle = new JLabel("è¨­å®šå¸³è™Ÿè³‡è¨Š");
+						setAccountPanelTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 						setAccountPanelTitle.setBounds(185, 57, 157, 23);
 						view.add(setAccountPanelTitle);
 						setAccountPanelTitle.repaint();
 						
-						JLabel NameSet = new JLabel("³]©w©m¦W¡G");
-						NameSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+						JLabel NameSet = new JLabel("è¨­å®šå§“åï¼š");
+						NameSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 						NameSet.setBounds(90, 131, 111, 23);
 						view.add(NameSet);
 						NameSet.repaint();
 						
 						JTextField newNameSet = new JTextField();
-						newNameSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						newNameSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						newNameSet.setBounds(194, 130, 230, 24);
 						view.add(newNameSet);
 						newNameSet.setColumns(10);
 						newNameSet.repaint();
 						
-						JButton back = new JButton("¦^¤W¤@­¶");
-						back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						JButton back = new JButton("å›ä¸Šä¸€é ");
+						back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						back.setBackground(SystemColor.controlHighlight);
 						back.setBounds(120, 206, 111, 31);
 						view.add(back);
@@ -911,8 +911,8 @@ public class GUI extends JFrame{
 						BuildAccountPanel ToBuild = new BuildAccountPanel(view, client);
 						back.addActionListener(ToBuild);
 						
-						JButton setNewProfessor = new JButton("§¹¦¨");
-						setNewProfessor.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						JButton setNewProfessor = new JButton("å®Œæˆ");
+						setNewProfessor.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						setNewProfessor.setBackground(SystemColor.controlHighlight);
 						setNewProfessor.setBounds(294, 206, 111, 31);
 						view.add(setNewProfessor);
@@ -924,14 +924,14 @@ public class GUI extends JFrame{
 						view.removeAll();
 						view.repaint();
 						
-						JLabel setAccountPanelTitle = new JLabel("³]©w±b¸¹¸ê°T");
-						setAccountPanelTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+						JLabel setAccountPanelTitle = new JLabel("è¨­å®šå¸³è™Ÿè³‡è¨Š");
+						setAccountPanelTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 						setAccountPanelTitle.setBounds(185, 57, 157, 23);
 						view.add(setAccountPanelTitle);
 						setAccountPanelTitle.repaint();
 						
-						JButton back = new JButton("¦^¤W¤@­¶");
-						back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						JButton back = new JButton("å›ä¸Šä¸€é ");
+						back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						back.setBackground(SystemColor.controlHighlight);
 						back.setBounds(120, 206, 111, 31);
 						view.add(back);
@@ -939,34 +939,34 @@ public class GUI extends JFrame{
 						BuildAccountPanel ToBuild = new BuildAccountPanel(view, client);
 						back.addActionListener(ToBuild);
 						
-						JLabel NameSet = new JLabel("³]©w©m¦W¡G");
-						NameSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+						JLabel NameSet = new JLabel("è¨­å®šå§“åï¼š");
+						NameSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 						NameSet.setBounds(90, 112, 111, 23);
 						view.add(NameSet);
 						NameSet.repaint();
 						
 						JTextField newNameSet = new JTextField();
-						newNameSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						newNameSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						newNameSet.setBounds(194, 111, 230, 24);
 						view.add(newNameSet);
 						newNameSet.setColumns(10);
 						newNameSet.repaint();
 						
-						JLabel YearSet = new JLabel("³]©w¤J¾Ç¦~¡G");
-						YearSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+						JLabel YearSet = new JLabel("è¨­å®šå…¥å­¸å¹´ï¼š");
+						YearSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 						YearSet.setBounds(70, 149, 131, 23);
 						view.add(YearSet);
 						YearSet.repaint();
 						
 						JTextField newYearSet = new JTextField();
-						newYearSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						newYearSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						newYearSet.setColumns(10);
 						newYearSet.setBounds(194, 148, 230, 24);
 						view.add(newYearSet);
 						newYearSet.repaint();
 						
-						JButton setNewStudent = new JButton("§¹¦¨");
-						setNewStudent.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						JButton setNewStudent = new JButton("å®Œæˆ");
+						setNewStudent.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						setNewStudent.setBackground(SystemColor.controlHighlight);
 						setNewStudent.setBounds(294, 206, 111, 31);
 						view.add(setNewStudent);
@@ -1018,9 +1018,9 @@ public class GUI extends JFrame{
 			
 			String[] option = new String[4];
 			option[0] = " ";
-			option[1] = "ºŞ²z­û";
-			option[2] = "±Ğ±Â";
-			option[3] = "¾Ç¥Í";
+			option[1] = "ç®¡ç†å“¡";
+			option[2] = "æ•™æˆ";
+			option[3] = "å­¸ç”Ÿ";
 			
 			Professor newOne = new Professor(AccountSetIT, passwordSet, option[2], newName, lessonProfessor);
 			boolean haveDone = newOne.buildFile();
@@ -1035,14 +1035,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 		
-			JLabel buildAccountPanelTitle = new JLabel("«Ø¥ß·s±b¸¹");
-			buildAccountPanelTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel buildAccountPanelTitle = new JLabel("å»ºç«‹æ–°å¸³è™Ÿ");
+			buildAccountPanelTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			buildAccountPanelTitle.setBounds(189, 16, 132, 23);
 			view.add(buildAccountPanelTitle);
 			buildAccountPanelTitle.repaint();
 			
-			JButton back = new JButton("¦^¤W¤@­¶");
-			back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton back = new JButton("å›ä¸Šä¸€é ");
+			back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			back.setBackground(SystemColor.controlHighlight);
 			back.setBounds(106, 268, 111, 31);
 			view.add(back);
@@ -1050,56 +1050,56 @@ public class GUI extends JFrame{
 			ManageAccountPanel ToManage = new ManageAccountPanel(view, client);
 			back.addActionListener(ToManage);
 			
-			JLabel choose = new JLabel("½Ğ¿ï¾Ü±b¸¹ºØÃş¡G");
-			choose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel choose = new JLabel("è«‹é¸æ“‡å¸³è™Ÿç¨®é¡ï¼š");
+			choose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			choose.setBounds(49, 55, 177, 23);
 			view.add(choose);
 			choose.repaint();
 			
 			JComboBox AccountKind = new JComboBox(option);
 			AccountKind.setBackground(SystemColor.controlHighlight);
-			AccountKind.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			AccountKind.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			AccountKind.setBounds(210, 54, 230, 29);
 			view.add(AccountKind);
 			AccountKind.repaint();
-			JLabel AccountSet = new JLabel("³]©w±b¸¹¡G");
-			AccountSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel AccountSet = new JLabel("è¨­å®šå¸³è™Ÿï¼š");
+			AccountSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			AccountSet.setBounds(106, 117, 111, 23);
 			view.add(AccountSet);
 			
 			JTextField newAccountSet = new JTextField();
-			newAccountSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newAccountSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newAccountSet.setBounds(210, 116, 230, 24);
 			view.add(newAccountSet);
 			newAccountSet.setColumns(10);
 			newAccountSet.repaint();
 			
-			JLabel PasswordSet = new JLabel("³]©w±K½X¡G");
-			PasswordSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel PasswordSet = new JLabel("è¨­å®šå¯†ç¢¼ï¼š");
+			PasswordSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			PasswordSet.setBounds(106, 160, 111, 23);
 			view.add(PasswordSet);
 			PasswordSet.repaint();
 			
 			JPasswordField newPasswordSet = new JPasswordField();
-			newPasswordSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newPasswordSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newPasswordSet.setBounds(210, 159, 230, 24);
 			view.add(newPasswordSet);
 			newPasswordSet.repaint();
 			
-			JLabel PasswordCheck = new JLabel("½T»{±K½X¡G");
-			PasswordCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel PasswordCheck = new JLabel("ç¢ºèªå¯†ç¢¼ï¼š");
+			PasswordCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			PasswordCheck.setBounds(106, 203, 111, 23);
 			view.add(PasswordCheck);
 			PasswordCheck.repaint();
 			
 			JPasswordField newPasswordCheck = new JPasswordField();
-			newPasswordCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newPasswordCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newPasswordCheck.setBounds(210, 202, 230, 24);
 			view.add(newPasswordCheck);
 			newPasswordCheck.repaint();
 			
-			JButton setNewAccount = new JButton("«Ø¥ß");
-			setNewAccount.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton setNewAccount = new JButton("å»ºç«‹");
+			setNewAccount.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			setNewAccount.setBackground(SystemColor.controlHighlight);
 			setNewAccount.setBounds(280, 268, 111, 31);
 			view.add(setNewAccount);
@@ -1152,9 +1152,9 @@ public class GUI extends JFrame{
 			
 			String[] option = new String[4];
 			option[0] = " ";
-			option[1] = "ºŞ²z­û";
-			option[2] = "±Ğ±Â";
-			option[3] = "¾Ç¥Í";
+			option[1] = "ç®¡ç†å“¡";
+			option[2] = "æ•™æˆ";
+			option[3] = "å­¸ç”Ÿ";
 			
 			Student newOne = new Student(AccountSetIT, passwordSet, option[3], newName, newYear,lessonProfessor);
 			boolean haveDone = newOne.buildFile();
@@ -1170,14 +1170,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 		
-			JLabel buildAccountPanelTitle = new JLabel("«Ø¥ß·s±b¸¹");
-			buildAccountPanelTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel buildAccountPanelTitle = new JLabel("å»ºç«‹æ–°å¸³è™Ÿ");
+			buildAccountPanelTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			buildAccountPanelTitle.setBounds(189, 16, 132, 23);
 			view.add(buildAccountPanelTitle);
 			buildAccountPanelTitle.repaint();
 			
-			JButton back = new JButton("¦^¤W¤@­¶");
-			back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton back = new JButton("å›ä¸Šä¸€é ");
+			back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			back.setBackground(SystemColor.controlHighlight);
 			back.setBounds(106, 268, 111, 31);
 			view.add(back);
@@ -1185,56 +1185,56 @@ public class GUI extends JFrame{
 			ManageAccountPanel ToManage = new ManageAccountPanel(view, client);
 			back.addActionListener(ToManage);
 			
-			JLabel choose = new JLabel("½Ğ¿ï¾Ü±b¸¹ºØÃş¡G");
-			choose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel choose = new JLabel("è«‹é¸æ“‡å¸³è™Ÿç¨®é¡ï¼š");
+			choose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			choose.setBounds(49, 55, 177, 23);
 			view.add(choose);
 			choose.repaint();
 			
 			JComboBox AccountKind = new JComboBox(option);
 			AccountKind.setBackground(SystemColor.controlHighlight);
-			AccountKind.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			AccountKind.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			AccountKind.setBounds(210, 54, 230, 29);
 			view.add(AccountKind);
 			AccountKind.repaint();
-			JLabel AccountSet = new JLabel("³]©w±b¸¹¡G");
-			AccountSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel AccountSet = new JLabel("è¨­å®šå¸³è™Ÿï¼š");
+			AccountSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			AccountSet.setBounds(106, 117, 111, 23);
 			view.add(AccountSet);
 			
 			JTextField newAccountSet = new JTextField();
-			newAccountSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newAccountSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newAccountSet.setBounds(210, 116, 230, 24);
 			view.add(newAccountSet);
 			newAccountSet.setColumns(10);
 			newAccountSet.repaint();
 			
-			JLabel PasswordSet = new JLabel("³]©w±K½X¡G");
-			PasswordSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel PasswordSet = new JLabel("è¨­å®šå¯†ç¢¼ï¼š");
+			PasswordSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			PasswordSet.setBounds(106, 160, 111, 23);
 			view.add(PasswordSet);
 			PasswordSet.repaint();
 			
 			JPasswordField newPasswordSet = new JPasswordField();
-			newPasswordSet.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newPasswordSet.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newPasswordSet.setBounds(210, 159, 230, 24);
 			view.add(newPasswordSet);
 			newPasswordSet.repaint();
 			
-			JLabel PasswordCheck = new JLabel("½T»{±K½X¡G");
-			PasswordCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel PasswordCheck = new JLabel("ç¢ºèªå¯†ç¢¼ï¼š");
+			PasswordCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			PasswordCheck.setBounds(106, 203, 111, 23);
 			view.add(PasswordCheck);
 			PasswordCheck.repaint();
 			
 			JPasswordField newPasswordCheck = new JPasswordField();
-			newPasswordCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newPasswordCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newPasswordCheck.setBounds(210, 202, 230, 24);
 			view.add(newPasswordCheck);
 			newPasswordCheck.repaint();
 			
-			JButton setNewAccount = new JButton("«Ø¥ß");
-			setNewAccount.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton setNewAccount = new JButton("å»ºç«‹");
+			setNewAccount.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			setNewAccount.setBackground(SystemColor.controlHighlight);
 			setNewAccount.setBounds(280, 268, 111, 31);
 			view.add(setNewAccount);
@@ -1262,11 +1262,11 @@ public class GUI extends JFrame{
 		public void actionPerformed(ActionEvent arg0) {
 			String[] option_identity = new String[3];
 			option_identity[0] = " ";
-			option_identity[1] = "±Ğ±Â";
-			option_identity[2] = "¾Ç¥Í";
+			option_identity[1] = "æ•™æˆ";
+			option_identity[2] = "å­¸ç”Ÿ";
 			
 			String selectedID = option_identity[IdentitycomboBox.getSelectedIndex()];
-			if (selectedID.equals("±Ğ±Â") && !AccounttextField.getText().equals("")) {
+			if (selectedID.equals("æ•™æˆ") && !AccounttextField.getText().equals("")) {
 				
 				Professor clientPro = client.readProFileID(AccounttextField.getText());
 				if (clientPro == null) {
@@ -1279,7 +1279,7 @@ public class GUI extends JFrame{
 					wrongType.run();
 				}
 				else {
-					JInternalFrame internalFrameagain = new JInternalFrame("§R°£±b¸¹¡H");
+					JInternalFrame internalFrameagain = new JInternalFrame("åˆªé™¤å¸³è™Ÿï¼Ÿ");
 					internalFrameagain.getContentPane().setEnabled(false);
 					internalFrameagain.setClosable(true);
 					internalFrameagain.setBounds(112, 33, 277, 158);
@@ -1287,14 +1287,14 @@ public class GUI extends JFrame{
 					internalFrameagain.getContentPane().setLayout(null);
 					internalFrameagain.repaint();
 					
-					JLabel checkWord = new JLabel("½T©w­n§R°£±b¸¹¡H");
-					checkWord.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel checkWord = new JLabel("ç¢ºå®šè¦åˆªé™¤å¸³è™Ÿï¼Ÿ");
+					checkWord.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					checkWord.setBounds(49, 30, 160, 23);
 					internalFrameagain.getContentPane().add(checkWord);
 					checkWord.repaint();
 					
-					JButton Yes = new JButton("¬O");
-					Yes.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton Yes = new JButton("æ˜¯");
+					Yes.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					Yes.setBackground(SystemColor.controlHighlight);
 					Yes.setBounds(47, 68, 65, 31);
 					internalFrameagain.getContentPane().add(Yes);
@@ -1310,8 +1310,8 @@ public class GUI extends JFrame{
 					};
 					Yes.addActionListener(chooseYes);
 					
-					JButton No = new JButton("§_");
-					No.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton No = new JButton("å¦");
+					No.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					No.setBackground(SystemColor.controlHighlight);
 					No.setBounds(144, 68, 65, 31);
 					internalFrameagain.getContentPane().add(No);
@@ -1326,7 +1326,7 @@ public class GUI extends JFrame{
 					No.addActionListener(chooseNo);
 				}
 			}
-			else if (selectedID.equals("¾Ç¥Í") && !AccounttextField.getText().equals("")) {
+			else if (selectedID.equals("å­¸ç”Ÿ") && !AccounttextField.getText().equals("")) {
 				Student clientStu = client.readStuFileID(AccounttextField.getText());
 				if (clientStu == null) {
 					WrongNoteGUI wrongType = new WrongNoteGUI();
@@ -1339,7 +1339,7 @@ public class GUI extends JFrame{
 				}
 				
 				else {
-					JInternalFrame internalFrameagain = new JInternalFrame("§R°£±b¸¹¡H");
+					JInternalFrame internalFrameagain = new JInternalFrame("åˆªé™¤å¸³è™Ÿï¼Ÿ");
 					internalFrameagain.getContentPane().setEnabled(false);
 					internalFrameagain.setClosable(true);
 					internalFrameagain.setBounds(112, 33, 277, 158);
@@ -1347,14 +1347,14 @@ public class GUI extends JFrame{
 					internalFrameagain.getContentPane().setLayout(null);
 					internalFrameagain.repaint();
 					
-					JLabel checkWord = new JLabel("½T©w­n§R°£±b¸¹¡H");
-					checkWord.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel checkWord = new JLabel("ç¢ºå®šè¦åˆªé™¤å¸³è™Ÿï¼Ÿ");
+					checkWord.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					checkWord.setBounds(49, 30, 160, 23);
 					internalFrameagain.getContentPane().add(checkWord);
 					checkWord.repaint();
 					
-					JButton Yes = new JButton("¬O");
-					Yes.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton Yes = new JButton("æ˜¯");
+					Yes.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					Yes.setBackground(SystemColor.controlHighlight);
 					Yes.setBounds(47, 68, 65, 31);
 					internalFrameagain.getContentPane().add(Yes);
@@ -1370,8 +1370,8 @@ public class GUI extends JFrame{
 					};
 					Yes.addActionListener(chooseYes);
 					
-					JButton No = new JButton("§_");
-					No.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton No = new JButton("å¦");
+					No.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					No.setBackground(SystemColor.controlHighlight);
 					No.setBounds(144, 68, 65, 31);
 					internalFrameagain.getContentPane().add(No);
@@ -1407,13 +1407,13 @@ public class GUI extends JFrame{
 		public void actionPerformed(ActionEvent arg0) {
 			String[] option_identity = new String[3];
 			option_identity[0] = " ";
-			option_identity[1] = "±Ğ±Â";
-			option_identity[2] = "¾Ç¥Í";
+			option_identity[1] = "æ•™æˆ";
+			option_identity[2] = "å­¸ç”Ÿ";
 			
 			int check_identity_toChange = IdentitycomboBox.getSelectedIndex();
 			String toCheck = option_identity[check_identity_toChange];
 			
-			if (toCheck.equals("±Ğ±Â") && !AccounttextField.getText().equals("")) {
+			if (toCheck.equals("æ•™æˆ") && !AccounttextField.getText().equals("")) {
 				
 				Professor user = client.readProFileID(AccounttextField.getText());
 				if (user == null) {
@@ -1430,48 +1430,48 @@ public class GUI extends JFrame{
 					view.removeAll();
 					view.repaint();
 					
-					JLabel changePasswordTitle = new JLabel("­×§ï±K½X");
-					changePasswordTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					JLabel changePasswordTitle = new JLabel("ä¿®æ”¹å¯†ç¢¼");
+					changePasswordTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					changePasswordTitle.setBounds(200, 58, 118, 23);
 					view.add(changePasswordTitle);
 					changePasswordTitle.repaint();
 					
-					JLabel newOne = new JLabel("·s±K½X¡G");
-					newOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel newOne = new JLabel("æ–°å¯†ç¢¼ï¼š");
+					newOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					newOne.setBounds(111, 115, 81, 23);
 					view.add(newOne);
 					newOne.repaint();
 					
-					JLabel lblNewLabel = new JLabel("½T»{·s±K½X¡G");
-					lblNewLabel.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel lblNewLabel = new JLabel("ç¢ºèªæ–°å¯†ç¢¼ï¼š");
+					lblNewLabel.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lblNewLabel.setBounds(70, 165, 127, 23);
 					view.add(lblNewLabel);
 					lblNewLabel.repaint();
 					
 					JPasswordField newIn = new JPasswordField();
-					newIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					newIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					newIn.setBounds(191, 115, 171, 24);
 					view.add(newIn);
 					newIn.repaint();
 					
 					JPasswordField checkNew = new JPasswordField();
-					checkNew.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					checkNew.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkNew.setBounds(191, 165, 171, 24);
 					view.add(checkNew);
 					checkNew.repaint();
 					
-					JButton changeIt = new JButton("½T»{­×§ï");
+					JButton changeIt = new JButton("ç¢ºèªä¿®æ”¹");
 					changeIt.setBackground(SystemColor.controlHighlight);
-					changeIt.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					changeIt.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					changeIt.setBounds(276, 221, 111, 31);
 					view.add(changeIt);
 					changeIt.repaint();
 					ChangeAccountPro change = new ChangeAccountPro(view, client, user, newIn, checkNew);
 					changeIt.addActionListener(change);
 					
-					JButton back = new JButton("¦^¤W¤@­¶");
+					JButton back = new JButton("å›ä¸Šä¸€é ");
 					back.setBackground(SystemColor.controlHighlight);
-					back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					back.setBounds(121, 221, 111, 31);
 					view.add(back);
 					back.repaint();
@@ -1480,7 +1480,7 @@ public class GUI extends JFrame{
 				}
 			}
 			
-			else if (toCheck.equals("¾Ç¥Í") && !AccounttextField.getText().equals("")) {
+			else if (toCheck.equals("å­¸ç”Ÿ") && !AccounttextField.getText().equals("")) {
 				Student user = client.readStuFileID(AccounttextField.getText());
 				if (user == null) {
 					WrongNoteGUI wrongType = new WrongNoteGUI();
@@ -1496,48 +1496,48 @@ public class GUI extends JFrame{
 					view.removeAll();
 					view.repaint();
 					
-					JLabel changePasswordTitle = new JLabel("­×§ï±K½X");
-					changePasswordTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					JLabel changePasswordTitle = new JLabel("ä¿®æ”¹å¯†ç¢¼");
+					changePasswordTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					changePasswordTitle.setBounds(200, 58, 118, 23);
 					view.add(changePasswordTitle);
 					changePasswordTitle.repaint();
 					
-					JLabel newOne = new JLabel("·s±K½X¡G");
-					newOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel newOne = new JLabel("æ–°å¯†ç¢¼ï¼š");
+					newOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					newOne.setBounds(111, 115, 81, 23);
 					view.add(newOne);
 					newOne.repaint();
 					
-					JLabel lblNewLabel = new JLabel("½T»{·s±K½X¡G");
-					lblNewLabel.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel lblNewLabel = new JLabel("ç¢ºèªæ–°å¯†ç¢¼ï¼š");
+					lblNewLabel.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lblNewLabel.setBounds(70, 165, 127, 23);
 					view.add(lblNewLabel);
 					lblNewLabel.repaint();
 					
 					JPasswordField newIn = new JPasswordField();
-					newIn.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					newIn.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					newIn.setBounds(191, 115, 171, 24);
 					view.add(newIn);
 					newIn.repaint();
 					
 					JPasswordField checkNew = new JPasswordField();
-					checkNew.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					checkNew.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkNew.setBounds(191, 165, 171, 24);
 					view.add(checkNew);
 					checkNew.repaint();
 					
-					JButton changeIt = new JButton("½T»{­×§ï");
+					JButton changeIt = new JButton("ç¢ºèªä¿®æ”¹");
 					changeIt.setBackground(SystemColor.controlHighlight);
-					changeIt.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					changeIt.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					changeIt.setBounds(276, 221, 111, 31);
 					view.add(changeIt);
 					changeIt.repaint();
 					ChangeAccountStu change = new ChangeAccountStu(view, client, user, newIn, checkNew);
 					changeIt.addActionListener(change);
 					
-					JButton back = new JButton("¦^¤W¤@­¶");
+					JButton back = new JButton("å›ä¸Šä¸€é ");
 					back.setBackground(SystemColor.controlHighlight);
-					back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					back.setBounds(121, 221, 111, 31);
 					view.add(back);
 					back.repaint();
@@ -1591,56 +1591,56 @@ public class GUI extends JFrame{
 					view.removeAll();
 					view.repaint();
 				
-					JLabel ManagerAccountTitle = new JLabel("ºŞ²z¥Î¤á±b¸¹");
+					JLabel ManagerAccountTitle = new JLabel("ç®¡ç†ç”¨æˆ¶å¸³è™Ÿ");
 					ManagerAccountTitle.setForeground(Color.BLACK);
-					ManagerAccountTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					ManagerAccountTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					ManagerAccountTitle.setBounds(175, 50, 156, 23);
 					view.add(ManagerAccountTitle);
 					ManagerAccountTitle.repaint();
 					
-					JButton buildNewOne = new JButton("«Ø¥ß·s±b¸¹");
+					JButton buildNewOne = new JButton("å»ºç«‹æ–°å¸³è™Ÿ");
 					buildNewOne.setBackground(SystemColor.controlHighlight);
-					buildNewOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					buildNewOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					buildNewOne.setBounds(53, 229, 134, 31);
 					view.add(buildNewOne);
 					buildNewOne.repaint();
 					BuildAccountPanel ToBuild = new BuildAccountPanel(view, user);
 					buildNewOne.addActionListener(ToBuild);
 					
-					JLabel accountChoose = new JLabel("½Ğ¿é¤J±ı­×§ï¤§±b¸¹¡G");
-					accountChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JLabel accountChoose = new JLabel("è«‹è¼¸å…¥æ¬²ä¿®æ”¹ä¹‹å¸³è™Ÿï¼š");
+					accountChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					accountChoose.setBounds(53, 112, 188, 23);
 					view.add(accountChoose);
 					accountChoose.repaint();
 					
 					JTextField AccounttextField = new JTextField();
-					AccounttextField.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					AccounttextField.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					AccounttextField.setBounds(233, 110, 232, 31);
 					AccounttextField.setText("");
 					view.add(AccounttextField);
 					AccounttextField.setColumns(10);
 					AccounttextField.repaint();
 					
-					JLabel identity = new JLabel("½Ğ¿ï¾Ü­×§ï±b¸¹¤§¨­¤À¡G");
-					identity.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JLabel identity = new JLabel("è«‹é¸æ“‡ä¿®æ”¹å¸³è™Ÿä¹‹èº«åˆ†ï¼š");
+					identity.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					identity.setBounds(53, 170, 203, 23);
 					view.add(identity);
 					identity.repaint();
 					
 					String[] option_identity = new String[3];
 					option_identity[0] = " ";
-					option_identity[1] = "±Ğ±Â";
-					option_identity[2] = "¾Ç¥Í";
+					option_identity[1] = "æ•™æˆ";
+					option_identity[2] = "å­¸ç”Ÿ";
 					JComboBox IdentitycomboBox = new JComboBox(option_identity);
 					IdentitycomboBox.setBackground(SystemColor.controlHighlight);
-					IdentitycomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					IdentitycomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					IdentitycomboBox.setBounds(253, 167, 212, 29);
 					view.add(IdentitycomboBox);
 					IdentitycomboBox.repaint();
 					
-					JButton makeDelete = new JButton("§R°£");
+					JButton makeDelete = new JButton("åˆªé™¤");
 					makeDelete.setBackground(SystemColor.controlHighlight);
-					makeDelete.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					makeDelete.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					makeDelete.setForeground(Color.RED);
 					makeDelete.setBounds(197, 229, 111, 31);
 					view.add(makeDelete);
@@ -1648,9 +1648,9 @@ public class GUI extends JFrame{
 					DeleteAccount delete = new DeleteAccount(view,user, AccounttextField, IdentitycomboBox);
 					makeDelete.addActionListener(delete);
 					
-					JButton makeChange = new JButton("­×§ï");
+					JButton makeChange = new JButton("ä¿®æ”¹");
 					makeChange.setBackground(SystemColor.controlHighlight);
-					makeChange.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					makeChange.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					makeChange.setBounds(318, 229, 111, 31);
 					view.add(makeChange);
 					makeChange.repaint();
@@ -1710,56 +1710,56 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 			
-				JLabel ManagerAccountTitle = new JLabel("ºŞ²z¥Î¤á±b¸¹");
+				JLabel ManagerAccountTitle = new JLabel("ç®¡ç†ç”¨æˆ¶å¸³è™Ÿ");
 				ManagerAccountTitle.setForeground(Color.BLACK);
-				ManagerAccountTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				ManagerAccountTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				ManagerAccountTitle.setBounds(175, 50, 156, 23);
 				view.add(ManagerAccountTitle);
 				ManagerAccountTitle.repaint();
 				
-				JButton buildNewOne = new JButton("«Ø¥ß·s±b¸¹");
+				JButton buildNewOne = new JButton("å»ºç«‹æ–°å¸³è™Ÿ");
 				buildNewOne.setBackground(SystemColor.controlHighlight);
-				buildNewOne.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildNewOne.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildNewOne.setBounds(53, 229, 134, 31);
 				view.add(buildNewOne);
 				buildNewOne.repaint();
 				BuildAccountPanel ToBuild = new BuildAccountPanel(view, user);
 				buildNewOne.addActionListener(ToBuild);
 				
-				JLabel accountChoose = new JLabel("½Ğ¿é¤J±ı­×§ï¤§±b¸¹¡G");
-				accountChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JLabel accountChoose = new JLabel("è«‹è¼¸å…¥æ¬²ä¿®æ”¹ä¹‹å¸³è™Ÿï¼š");
+				accountChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				accountChoose.setBounds(53, 112, 188, 23);
 				view.add(accountChoose);
 				accountChoose.repaint();
 				
 				JTextField AccounttextField = new JTextField();
-				AccounttextField.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				AccounttextField.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				AccounttextField.setBounds(233, 110, 232, 31);
 				AccounttextField.setText("");
 				view.add(AccounttextField);
 				AccounttextField.setColumns(10);
 				AccounttextField.repaint();
 				
-				JLabel identity = new JLabel("½Ğ¿ï¾Ü­×§ï±b¸¹¤§¨­¤À¡G");
-				identity.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JLabel identity = new JLabel("è«‹é¸æ“‡ä¿®æ”¹å¸³è™Ÿä¹‹èº«åˆ†ï¼š");
+				identity.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				identity.setBounds(53, 170, 203, 23);
 				view.add(identity);
 				identity.repaint();
 				
 				String[] option_identity = new String[3];
 				option_identity[0] = " ";
-				option_identity[1] = "±Ğ±Â";
-				option_identity[2] = "¾Ç¥Í";
+				option_identity[1] = "æ•™æˆ";
+				option_identity[2] = "å­¸ç”Ÿ";
 				JComboBox IdentitycomboBox = new JComboBox(option_identity);
 				IdentitycomboBox.setBackground(SystemColor.controlHighlight);
-				IdentitycomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				IdentitycomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				IdentitycomboBox.setBounds(253, 167, 212, 29);
 				view.add(IdentitycomboBox);
 				IdentitycomboBox.repaint();
 				
-				JButton makeDelete = new JButton("§R°£");
+				JButton makeDelete = new JButton("åˆªé™¤");
 				makeDelete.setBackground(SystemColor.controlHighlight);
-				makeDelete.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				makeDelete.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				makeDelete.setForeground(Color.RED);
 				makeDelete.setBounds(197, 229, 111, 31);
 				view.add(makeDelete);
@@ -1767,9 +1767,9 @@ public class GUI extends JFrame{
 				DeleteAccount delete = new DeleteAccount(view,user, AccounttextField, IdentitycomboBox);
 				makeDelete.addActionListener(delete);
 				
-				JButton makeChange = new JButton("­×§ï");
+				JButton makeChange = new JButton("ä¿®æ”¹");
 				makeChange.setBackground(SystemColor.controlHighlight);
-				makeChange.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				makeChange.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				makeChange.setBounds(318, 229, 111, 31);
 				view.add(makeChange);
 				makeChange.repaint();
@@ -1801,40 +1801,40 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel deleteAccountTitle = new JLabel("§R°£±b¸¹");
+				JLabel deleteAccountTitle = new JLabel("åˆªé™¤å¸³è™Ÿ");
 				deleteAccountTitle.setForeground(Color.RED);
-				deleteAccountTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				deleteAccountTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				deleteAccountTitle.setBounds(200, 58, 118, 23);
 				view.add(deleteAccountTitle);
 				deleteAccountTitle.repaint();
 				
-				JLabel my_password = new JLabel("½Ğ¿é¤J±K½X¡G");
-				my_password.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel my_password = new JLabel("è«‹è¼¸å…¥å¯†ç¢¼ï¼š");
+				my_password.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				my_password.setBounds(70, 113, 126, 23);
 				view.add(my_password);
 				my_password.repaint();
 				
-				JLabel password_again = new JLabel("½T»{±K½X¡G");
-				password_again.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel password_again = new JLabel("ç¢ºèªå¯†ç¢¼ï¼š");
+				password_again.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				password_again.setBounds(90, 151, 100, 23);
 				view.add(password_again);
 				password_again.repaint();
 				
 				JPasswordField in = new JPasswordField();
-				in.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				in.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				in.setBounds(199, 113, 171, 24);
 				view.add(in);
 				in.repaint();
 				
 				JPasswordField checkin = new JPasswordField();
-				checkin.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				checkin.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkin.setBounds(199, 151, 171, 24);
 				view.add(checkin);
 				checkin.repaint();
 				
-				JButton deleteIt = new JButton("§R°£");
+				JButton deleteIt = new JButton("åˆªé™¤");
 				deleteIt.setBackground(SystemColor.controlHighlight);
-				deleteIt.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				deleteIt.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				deleteIt.setBounds(278, 210, 111, 31);
 				view.add(deleteIt);
 				deleteIt.repaint();
@@ -1859,7 +1859,7 @@ public class GUI extends JFrame{
 		
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			JInternalFrame internalFrame = new JInternalFrame("§R°£±b¸¹¡H");
+			JInternalFrame internalFrame = new JInternalFrame("åˆªé™¤å¸³è™Ÿï¼Ÿ");
 			internalFrame.getContentPane().setEnabled(false);
 			internalFrame.setClosable(true);
 			internalFrame.setBounds(112, 53, 277, 158);
@@ -1867,14 +1867,14 @@ public class GUI extends JFrame{
 			internalFrame.getContentPane().setLayout(null);
 			internalFrame.repaint();
 			
-			JLabel checkWord = new JLabel("½T©w­n§R°£±b¸¹¡H");
-			checkWord.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel checkWord = new JLabel("ç¢ºå®šè¦åˆªé™¤å¸³è™Ÿï¼Ÿ");
+			checkWord.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			checkWord.setBounds(49, 30, 160, 23);
 			internalFrame.getContentPane().add(checkWord);
 			checkWord.repaint();
 			
-			JButton Yes = new JButton("¬O");
-			Yes.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton Yes = new JButton("æ˜¯");
+			Yes.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			Yes.setBackground(SystemColor.controlHighlight);
 			Yes.setBounds(47, 68, 65, 31);
 			internalFrame.getContentPane().add(Yes);
@@ -1906,8 +1906,8 @@ public class GUI extends JFrame{
 			};
 			Yes.addActionListener(chooseYes);
 			
-			JButton No = new JButton("§_");
-			No.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton No = new JButton("å¦");
+			No.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			No.setBackground(SystemColor.controlHighlight);
 			No.setBounds(144, 68, 65, 31);
 			internalFrame.getContentPane().add(No);
@@ -1940,17 +1940,17 @@ public class GUI extends JFrame{
 			int identity = identityIN.getSelectedIndex();
 			String[] option = new String[4];
 			option[0] = " ";
-			option[1] = "ºŞ²z­û";
-			option[2] = "±Ğ±Â";
-			option[3] = "¾Ç¥Í";
+			option[1] = "ç®¡ç†å“¡";
+			option[2] = "æ•™æˆ";
+			option[3] = "å­¸ç”Ÿ";
 			Manager user = (Manager)client.changeType(option[1]);
 			
 			view.removeAll();
 			view.repaint();
 			if (client.identity.equals(option[1])) {
 				
-				JButton lessonEdit = new JButton("½s¿è½Òµ{");
-				lessonEdit.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton lessonEdit = new JButton("ç·¨è¼¯èª²ç¨‹");
+				lessonEdit.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				lessonEdit.setBackground(SystemColor.controlHighlight);
 				lessonEdit.setBounds(176, 62, 153, 31);
 				view.add(lessonEdit);
@@ -1958,8 +1958,8 @@ public class GUI extends JFrame{
 				LessonEdit edit = new LessonEdit(view, user);
 				lessonEdit.addActionListener(edit);
 				
-				JButton lessonRead = new JButton("¬d¬İ½Òµ{");
-				lessonRead.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton lessonRead = new JButton("æŸ¥çœ‹èª²ç¨‹");
+				lessonRead.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				lessonRead.setBackground(SystemColor.controlHighlight);
 				lessonRead.setBounds(176, 136, 153, 31);
 				view.add(lessonRead);
@@ -1967,8 +1967,8 @@ public class GUI extends JFrame{
 				LessonRead read = new LessonRead(view, user);
 				lessonRead.addActionListener(read);
 				
-				JButton chooseLesson = new JButton("¿ï½ÒºŞ²z");
-				chooseLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton chooseLesson = new JButton("é¸èª²ç®¡ç†");
+				chooseLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				chooseLesson.setBackground(SystemColor.controlHighlight);
 				chooseLesson.setBounds(176, 210, 153, 31);
 				view.add(chooseLesson);
@@ -1979,14 +1979,14 @@ public class GUI extends JFrame{
 			
 			else if (client.identity.equals(option[2])) {
 				
-				JLabel ReadLessonTitle = new JLabel("¬d¬İ½Òµ{");
-				ReadLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel ReadLessonTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹");
+				ReadLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				ReadLessonTitle.setBounds(200, 15, 118, 23);
 				view.add(ReadLessonTitle);
 				ReadLessonTitle.repaint();
 				
-				JLabel YearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				YearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel YearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				YearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				YearChoose.setBounds(55, 50, 127, 23);
 				view.add(YearChoose);
 				YearChoose.repaint();
@@ -2005,14 +2005,14 @@ public class GUI extends JFrame{
 	            }
 				JComboBox yearChoiceBox = new JComboBox(yearChoice);
 				yearChoiceBox.setBackground(SystemColor.controlHighlight);
-				yearChoiceBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				yearChoiceBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoiceBox.setBounds(176, 47, 183, 29);
 				view.add(yearChoiceBox);
 				yearChoiceBox.repaint();
 				
-				JButton GoToCheck = new JButton("¬d¸ß");
+				JButton GoToCheck = new JButton("æŸ¥è©¢");
 				GoToCheck.setBackground(SystemColor.controlHighlight);
-				GoToCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				GoToCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				GoToCheck.setBounds(374, 47, 77, 29);
 				view.add(GoToCheck);
 				GoToCheck.repaint();
@@ -2021,14 +2021,14 @@ public class GUI extends JFrame{
 			}
 			
 			else if (client.identity.equals(option[3])) {
-				JLabel ReadLessonTitle = new JLabel("¬d¬İ½Òµ{");
-				ReadLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel ReadLessonTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹");
+				ReadLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				ReadLessonTitle.setBounds(200, 15, 118, 23);
 				view.add(ReadLessonTitle);
 				ReadLessonTitle.repaint();
 				
-				JLabel YearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				YearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel YearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				YearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				YearChoose.setBounds(55, 50, 127, 23);
 				view.add(YearChoose);
 				YearChoose.repaint();
@@ -2047,14 +2047,14 @@ public class GUI extends JFrame{
 	            }
 				JComboBox yearChoiceBox = new JComboBox(yearChoice);
 				yearChoiceBox.setBackground(SystemColor.controlHighlight);
-				yearChoiceBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				yearChoiceBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoiceBox.setBounds(176, 47, 183, 29);
 				view.add(yearChoiceBox);
 				yearChoiceBox.repaint();
 				
-				JButton GoToCheck = new JButton("¬d¸ß");
+				JButton GoToCheck = new JButton("æŸ¥è©¢");
 				GoToCheck.setBackground(SystemColor.controlHighlight);
-				GoToCheck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				GoToCheck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				GoToCheck.setBounds(374, 47, 77, 29);
 				view.add(GoToCheck);
 				GoToCheck.repaint();
@@ -2080,23 +2080,23 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel editLessonTitle = new JLabel("½s¿è½Òµ{");
-				editLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel editLessonTitle = new JLabel("ç·¨è¼¯èª²ç¨‹");
+				editLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				editLessonTitle.setBounds(200, 58, 118, 23);
 				view.add(editLessonTitle);
 				editLessonTitle.repaint();
 				
-				JButton buildLesson = new JButton("«Ø¥ß·s½Òµ{");
+				JButton buildLesson = new JButton("å»ºç«‹æ–°èª²ç¨‹");
 				buildLesson.setBackground(SystemColor.controlHighlight);
-				buildLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildLesson.setBounds(65, 200, 134, 31);
 				view.add(buildLesson);
 				buildLesson.repaint();
 				BuildLesson build = new BuildLesson(view, client);
 				buildLesson.addActionListener(build);
 				
-				JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoose.setBounds(60, 99, 127, 23);
 				view.add(yearChoose);
 				yearChoose.repaint();
@@ -2115,14 +2115,14 @@ public class GUI extends JFrame{
 	            }
 	            JComboBox yearFolder = new JComboBox(yearChoice);
 				yearFolder.setBackground(SystemColor.controlHighlight);
-				yearFolder.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				yearFolder.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearFolder.setBounds(187, 96, 212, 29);
 				view.add(yearFolder);
 				yearFolder.repaint();
 				
-				JButton checkFile = new JButton("¬d¸ß");
+				JButton checkFile = new JButton("æŸ¥è©¢");
 				checkFile.setBackground(SystemColor.controlHighlight);
-				checkFile.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				checkFile.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkFile.setBounds(411, 96, 77, 29);
 				view.add(checkFile);
 				checkFile.repaint();
@@ -2151,23 +2151,23 @@ public class GUI extends JFrame{
 				view.repaint();
 				
 				if (lessonFolder.getSelectedIndex() == 0) {
-					JLabel editLessonTitle = new JLabel("½s¿è½Òµ{");
-					editLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					JLabel editLessonTitle = new JLabel("ç·¨è¼¯èª²ç¨‹");
+					editLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					editLessonTitle.setBounds(200, 58, 118, 23);
 					view.add(editLessonTitle);
 					editLessonTitle.repaint();
 					
-					JButton buildLesson = new JButton("«Ø¥ß·s½Òµ{");
+					JButton buildLesson = new JButton("å»ºç«‹æ–°èª²ç¨‹");
 					buildLesson.setBackground(SystemColor.controlHighlight);
-					buildLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					buildLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					buildLesson.setBounds(65, 200, 134, 31);
 					view.add(buildLesson);
 					buildLesson.repaint();
 					BuildLesson build = new BuildLesson(view, client);
 					buildLesson.addActionListener(build);
 					
-					JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-					yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+					yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					yearChoose.setBounds(60, 99, 127, 23);
 					view.add(yearChoose);
 					yearChoose.repaint();
@@ -2186,14 +2186,14 @@ public class GUI extends JFrame{
 		            }
 		            JComboBox yearFolder = new JComboBox(yearChoice);
 					yearFolder.setBackground(SystemColor.controlHighlight);
-					yearFolder.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					yearFolder.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					yearFolder.setBounds(187, 96, 212, 29);
 					view.add(yearFolder);
 					yearFolder.repaint();
 					
-					JButton checkFile = new JButton("¬d¸ß");
+					JButton checkFile = new JButton("æŸ¥è©¢");
 					checkFile.setBackground(SystemColor.controlHighlight);
-					checkFile.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					checkFile.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkFile.setBounds(411, 96, 77, 29);
 					view.add(checkFile);
 					checkFile.repaint();
@@ -2202,23 +2202,23 @@ public class GUI extends JFrame{
 				}
 				else {
 					
-					JLabel editLessonTitle = new JLabel("½s¿è½Òµ{");
-					editLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					JLabel editLessonTitle = new JLabel("ç·¨è¼¯èª²ç¨‹");
+					editLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					editLessonTitle.setBounds(200, 58, 118, 23);
 					view.add(editLessonTitle);
 					editLessonTitle.repaint();
 					
-					JButton buildLesson = new JButton("«Ø¥ß·s½Òµ{");
+					JButton buildLesson = new JButton("å»ºç«‹æ–°èª²ç¨‹");
 					buildLesson.setBackground(SystemColor.controlHighlight);
-					buildLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					buildLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					buildLesson.setBounds(65, 200, 134, 31);
 					view.add(buildLesson);
 					buildLesson.repaint();
 					BuildLesson build = new BuildLesson(view, client);
 					buildLesson.addActionListener(build);
 					
-					JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-					yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+					yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					yearChoose.setBounds(60, 99, 127, 23);
 					view.add(yearChoose);
 					yearChoose.repaint();
@@ -2237,15 +2237,15 @@ public class GUI extends JFrame{
 		            }
 		            JComboBox yearFolder = new JComboBox(yearChoice);
 					yearFolder.setBackground(SystemColor.controlHighlight);
-					yearFolder.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					yearFolder.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					yearFolder.setBounds(187, 96, 212, 29);
 					yearFolder.setSelectedIndex(index);
 					view.add(yearFolder);
 					yearFolder.repaint();
 					
-					JButton checkFile = new JButton("¬d¸ß");
+					JButton checkFile = new JButton("æŸ¥è©¢");
 					checkFile.setBackground(SystemColor.controlHighlight);
-					checkFile.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					checkFile.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkFile.setBounds(411, 96, 77, 29);
 					view.add(checkFile);
 					checkFile.repaint();
@@ -2254,22 +2254,22 @@ public class GUI extends JFrame{
 					
 					String[] allLesson = client.showAllLesson(yearChoice[lessonFolder.getSelectedIndex()]);
 					
-					JLabel lessonChoose = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-					lessonChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel lessonChoose = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+					lessonChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lessonChoose.setBounds(60, 146, 127, 23);
 					view.add(lessonChoose);
 					lessonChoose.repaint();
 					
 					JComboBox lessonFile = new JComboBox(allLesson);
-					lessonFile.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					lessonFile.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lessonFile.setBackground(SystemColor.controlHighlight);
 					lessonFile.setBounds(187, 143, 212, 29);
 					view.add(lessonFile);
 					lessonFile.repaint();
 					
-					JButton deleteLesson = new JButton("§R°£");
+					JButton deleteLesson = new JButton("åˆªé™¤");
 					deleteLesson.setForeground(Color.RED);
-					deleteLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					deleteLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					deleteLesson.setBackground(SystemColor.controlHighlight);
 					deleteLesson.setBounds(215, 200, 111, 31);
 					view.add(deleteLesson);
@@ -2277,8 +2277,8 @@ public class GUI extends JFrame{
 					DeleteLesson delete = new DeleteLesson(view, client, yearFolder, lessonFile);
 					deleteLesson.addActionListener(delete);
 					
-					JButton changeLesson = new JButton("­×§ï");
-					changeLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton changeLesson = new JButton("ä¿®æ”¹");
+					changeLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					changeLesson.setBackground(SystemColor.controlHighlight);
 					changeLesson.setBounds(340, 200, 111, 31);
 					view.add(changeLesson);
@@ -2305,108 +2305,108 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel buildLessonTitle = new JLabel("«Ø¥ß·s½Òµ{");
-			buildLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel buildLessonTitle = new JLabel("å»ºç«‹æ–°èª²ç¨‹");
+			buildLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			buildLessonTitle.setBounds(197, 15, 127, 23);
 			view.add(buildLessonTitle);
 			buildLessonTitle.repaint();
 			
-			JLabel buildName = new JLabel("¿é¤J½Òµ{¦WºÙ¡G");
-			buildName.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel buildName = new JLabel("è¼¸å…¥èª²ç¨‹åç¨±ï¼š");
+			buildName.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			buildName.setBounds(15, 98, 140, 23);
 			view.add(buildName);
 			buildName.repaint();
 			
 			JTextField buildNameIN = new JTextField();
-			buildNameIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			buildNameIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildNameIN.setBounds(151, 97, 102, 24);
 			view.add(buildNameIN);
 			buildNameIN.setColumns(10);
 			buildNameIN.repaint();
 			
-			JLabel buildProName = new JLabel("¿é¤J±Ğ±Â©m¦W¡G");
-			buildProName.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel buildProName = new JLabel("è¼¸å…¥æ•™æˆå§“åï¼š");
+			buildProName.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			buildProName.setBounds(15, 143, 140, 23);
 			view.add(buildProName);
 			
 			JTextField buildProNameIN = new JTextField();
-			buildProNameIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			buildProNameIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildProNameIN.setColumns(10);
 			buildProNameIN.setBounds(151, 142, 102, 24);
 			view.add(buildProNameIN);
 			buildProNameIN.repaint();
 			
-			JLabel buildType = new JLabel("¿ï¾Ü½Òµ{Ãş«¬¡G");
-			buildType.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel buildType = new JLabel("é¸æ“‡èª²ç¨‹é¡å‹ï¼š");
+			buildType.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			buildType.setBounds(265, 98, 140, 23);
 			view.add(buildType);
 			buildType.repaint();
 			
 			String[] typeChoose = new String[3];
 			typeChoose[0] = " ";
-			typeChoose[1] = "¥²­×";
-			typeChoose[2] = "¿ï­×";
+			typeChoose[1] = "å¿…ä¿®";
+			typeChoose[2] = "é¸ä¿®";
 			JComboBox buildTypeIN = new JComboBox(typeChoose);
 			buildTypeIN.setBackground(SystemColor.controlHighlight);
-			buildTypeIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			buildTypeIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildTypeIN.setBounds(401, 96, 102, 29);
 			view.add(buildTypeIN);
 			buildTypeIN.repaint();
 			
-			JLabel buildNum = new JLabel("¿é¤J½Òµ{¥N½X¡G");
-			buildNum.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel buildNum = new JLabel("è¼¸å…¥èª²ç¨‹ä»£ç¢¼ï¼š");
+			buildNum.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			buildNum.setBounds(265, 143, 140, 23);
 			view.add(buildNum);
 			buildNum.repaint();
 			
 			JTextField buildNumIN = new JTextField();
-			buildNumIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			buildNumIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildNumIN.setColumns(10);
 			buildNumIN.setBounds(401, 141, 102, 24);
 			view.add(buildNumIN);
 			buildNumIN.repaint();
 			
-			JLabel buildPoint = new JLabel("¿é¤J½Òµ{¾Ç¤À¡G");
-			buildPoint.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel buildPoint = new JLabel("è¼¸å…¥èª²ç¨‹å­¸åˆ†ï¼š");
+			buildPoint.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			buildPoint.setBounds(265, 188, 140, 23);
 			view.add(buildPoint);
 			buildPoint.repaint();
 			
 			JTextField buildPointIN = new JTextField();
-			buildPointIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			buildPointIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildPointIN.setColumns(10);
 			buildPointIN.setBounds(401, 187, 102, 24);
 			view.add(buildPointIN);
 			buildPointIN.repaint();
 			
-			JLabel buildWord = new JLabel("¿é¤J½Òµ{¤jºõ¡G");
-			buildWord.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel buildWord = new JLabel("è¼¸å…¥èª²ç¨‹å¤§ç¶±ï¼š");
+			buildWord.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			buildWord.setBounds(79, 232, 140, 23);
 			view.add(buildWord);
 			buildWord.repaint();
 			
 			JTextField buildWordIN = new JTextField();
-			buildWordIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			buildWordIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildWordIN.setColumns(10);
 			buildWordIN.setBounds(225, 231, 229, 24);
 			view.add(buildWordIN);
 			buildWordIN.repaint();
 			
-			JLabel buildYear = new JLabel("¿é¤J¶}½Ò¾Ç´Á¡G");
-			buildYear.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel buildYear = new JLabel("è¼¸å…¥é–‹èª²å­¸æœŸï¼š");
+			buildYear.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			buildYear.setBounds(15, 190, 140, 23);
 			view.add(buildYear);
 			buildYear.repaint();
 			
 			JTextField buildYearIN = new JTextField();
-			buildYearIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			buildYearIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildYearIN.setColumns(10);
 			buildYearIN.setBounds(151, 187, 102, 24);
 			view.add(buildYearIN);
 			buildYearIN.repaint();
 			
-			JButton buildLessonOK = new JButton("«Ø¥ß");
-			buildLessonOK.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton buildLessonOK = new JButton("å»ºç«‹");
+			buildLessonOK.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			buildLessonOK.setBackground(SystemColor.controlHighlight);
 			buildLessonOK.setBounds(254, 280, 127, 31);
 			view.add(buildLessonOK);
@@ -2415,8 +2415,8 @@ public class GUI extends JFrame{
 			buildLessonOK.addActionListener(buildIT);
 			
 			
-			JButton back = new JButton("¦^¤W¤@­¶");
-			back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton back = new JButton("å›ä¸Šä¸€é ");
+			back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			back.setBackground(SystemColor.controlHighlight);
 			back.setBounds(112, 280, 127, 31);
 			view.add(back);
@@ -2455,8 +2455,8 @@ public class GUI extends JFrame{
 			public void actionPerformed(ActionEvent arg0) {
 				String[] typeChoose = new String[3];
 				typeChoose[0] = " ";
-				typeChoose[1] = "¥²­×";
-				typeChoose[2] = "¿ï­×";
+				typeChoose[1] = "å¿…ä¿®";
+				typeChoose[2] = "é¸ä¿®";
 				
 				String lessonName = buildNameIN.getText();
 				String proName = buildProNameIN.getText();
@@ -2475,104 +2475,104 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel buildLessonTitle = new JLabel("«Ø¥ß·s½Òµ{");
-				buildLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel buildLessonTitle = new JLabel("å»ºç«‹æ–°èª²ç¨‹");
+				buildLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				buildLessonTitle.setBounds(197, 15, 127, 23);
 				view.add(buildLessonTitle);
 				buildLessonTitle.repaint();
 				
-				JLabel buildName = new JLabel("¿é¤J½Òµ{¦WºÙ¡G");
-				buildName.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel buildName = new JLabel("è¼¸å…¥èª²ç¨‹åç¨±ï¼š");
+				buildName.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				buildName.setBounds(15, 98, 140, 23);
 				view.add(buildName);
 				buildName.repaint();
 				
 				JTextField buildNameIN = new JTextField();
-				buildNameIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildNameIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildNameIN.setBounds(151, 97, 102, 24);
 				view.add(buildNameIN);
 				buildNameIN.setColumns(10);
 				buildNameIN.repaint();
 				
-				JLabel buildProName = new JLabel("¿é¤J±Ğ±Â©m¦W¡G");
-				buildProName.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel buildProName = new JLabel("è¼¸å…¥æ•™æˆå§“åï¼š");
+				buildProName.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				buildProName.setBounds(15, 143, 140, 23);
 				view.add(buildProName);
 				
 				JTextField buildProNameIN = new JTextField();
-				buildProNameIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildProNameIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildProNameIN.setColumns(10);
 				buildProNameIN.setBounds(151, 142, 102, 24);
 				view.add(buildProNameIN);
 				buildProNameIN.repaint();
 				
-				JLabel buildType = new JLabel("¿ï¾Ü½Òµ{Ãş«¬¡G");
-				buildType.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel buildType = new JLabel("é¸æ“‡èª²ç¨‹é¡å‹ï¼š");
+				buildType.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				buildType.setBounds(265, 98, 140, 23);
 				view.add(buildType);
 				buildType.repaint();
 				
 				JComboBox buildTypeIN = new JComboBox(typeChoose);
 				buildTypeIN.setBackground(SystemColor.controlHighlight);
-				buildTypeIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildTypeIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildTypeIN.setBounds(401, 96, 102, 29);
 				view.add(buildTypeIN);
 				buildTypeIN.repaint();
 				
-				JLabel buildNum = new JLabel("¿é¤J½Òµ{¥N½X¡G");
-				buildNum.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel buildNum = new JLabel("è¼¸å…¥èª²ç¨‹ä»£ç¢¼ï¼š");
+				buildNum.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				buildNum.setBounds(265, 143, 140, 23);
 				view.add(buildNum);
 				buildNum.repaint();
 				
 				JTextField buildNumIN = new JTextField();
-				buildNumIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildNumIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildNumIN.setColumns(10);
 				buildNumIN.setBounds(401, 141, 102, 24);
 				view.add(buildNumIN);
 				buildNumIN.repaint();
 				
-				JLabel buildPoint = new JLabel("¿é¤J½Òµ{¾Ç¤À¡G");
-				buildPoint.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel buildPoint = new JLabel("è¼¸å…¥èª²ç¨‹å­¸åˆ†ï¼š");
+				buildPoint.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				buildPoint.setBounds(265, 188, 140, 23);
 				view.add(buildPoint);
 				buildPoint.repaint();
 				
 				JTextField buildPointIN = new JTextField();
-				buildPointIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildPointIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildPointIN.setColumns(10);
 				buildPointIN.setBounds(401, 187, 102, 24);
 				view.add(buildPointIN);
 				buildPointIN.repaint();
 				
-				JLabel buildWord = new JLabel("¿é¤J½Òµ{¤jºõ¡G");
-				buildWord.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel buildWord = new JLabel("è¼¸å…¥èª²ç¨‹å¤§ç¶±ï¼š");
+				buildWord.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				buildWord.setBounds(79, 232, 140, 23);
 				view.add(buildWord);
 				buildWord.repaint();
 				
 				JTextField buildWordIN = new JTextField();
-				buildWordIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildWordIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildWordIN.setColumns(10);
 				buildWordIN.setBounds(225, 231, 229, 24);
 				view.add(buildWordIN);
 				buildWordIN.repaint();
 				
-				JLabel buildYear = new JLabel("¿é¤J¶}½Ò¾Ç´Á¡G");
-				buildYear.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel buildYear = new JLabel("è¼¸å…¥é–‹èª²å­¸æœŸï¼š");
+				buildYear.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				buildYear.setBounds(15, 190, 140, 23);
 				view.add(buildYear);
 				buildYear.repaint();
 				
 				JTextField buildYearIN = new JTextField();
-				buildYearIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				buildYearIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildYearIN.setColumns(10);
 				buildYearIN.setBounds(151, 187, 102, 24);
 				view.add(buildYearIN);
 				buildYearIN.repaint();
 				
-				JButton buildLessonOK = new JButton("«Ø¥ß");
-				buildLessonOK.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton buildLessonOK = new JButton("å»ºç«‹");
+				buildLessonOK.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				buildLessonOK.setBackground(SystemColor.controlHighlight);
 				buildLessonOK.setBounds(254, 280, 127, 31);
 				view.add(buildLessonOK);
@@ -2580,8 +2580,8 @@ public class GUI extends JFrame{
 				BuildLessonGO buildIT = new BuildLessonGO(view, client, buildNameIN, buildProNameIN, buildTypeIN, buildNumIN, buildPointIN, buildWordIN, buildYearIN);
 				buildLessonOK.addActionListener(buildIT);
 				
-				JButton back = new JButton("¦^¤W¤@­¶");
-				back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton back = new JButton("å›ä¸Šä¸€é ");
+				back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				back.setBackground(SystemColor.controlHighlight);
 				back.setBounds(112, 280, 127, 31);
 				view.add(back);
@@ -2622,7 +2622,7 @@ public class GUI extends JFrame{
 	            }
 	            String[] allLesson = client.showAllLesson(yearChoice[yearFolder.getSelectedIndex()]);
 	            
-				JInternalFrame internalFrame = new JInternalFrame("§R°£½Òµ{¡H");
+				JInternalFrame internalFrame = new JInternalFrame("åˆªé™¤èª²ç¨‹ï¼Ÿ");
 				internalFrame.getContentPane().setEnabled(false);
 				internalFrame.setClosable(true);
 				internalFrame.setBounds(112, 35, 277, 158);
@@ -2630,14 +2630,14 @@ public class GUI extends JFrame{
 				internalFrame.getContentPane().setLayout(null);
 				internalFrame.repaint();
 				
-				JLabel checkWord = new JLabel("½T©w­n§R°£½Òµ{¡H");
-				checkWord.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel checkWord = new JLabel("ç¢ºå®šè¦åˆªé™¤èª²ç¨‹ï¼Ÿ");
+				checkWord.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				checkWord.setBounds(49, 30, 160, 23);
 				internalFrame.getContentPane().add(checkWord);
 				checkWord.repaint();
 				
-				JButton Yes = new JButton("¬O");
-				Yes.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton Yes = new JButton("æ˜¯");
+				Yes.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				Yes.setBackground(SystemColor.controlHighlight);
 				Yes.setBounds(47, 68, 65, 31);
 				internalFrame.getContentPane().add(Yes);
@@ -2655,23 +2655,23 @@ public class GUI extends JFrame{
 						view.removeAll();
 						view.repaint();
 						
-						JLabel editLessonTitle = new JLabel("½s¿è½Òµ{");
-						editLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+						JLabel editLessonTitle = new JLabel("ç·¨è¼¯èª²ç¨‹");
+						editLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 						editLessonTitle.setBounds(200, 58, 118, 23);
 						view.add(editLessonTitle);
 						editLessonTitle.repaint();
 						
-						JButton buildLesson = new JButton("«Ø¥ß·s½Òµ{");
+						JButton buildLesson = new JButton("å»ºç«‹æ–°èª²ç¨‹");
 						buildLesson.setBackground(SystemColor.controlHighlight);
-						buildLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						buildLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						buildLesson.setBounds(65, 200, 134, 31);
 						view.add(buildLesson);
 						buildLesson.repaint();
 						BuildLesson build = new BuildLesson(view, client);
 						buildLesson.addActionListener(build);
 						
-						JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-						yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+						JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+						yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 						yearChoose.setBounds(60, 99, 127, 23);
 						view.add(yearChoose);
 						yearChoose.repaint();
@@ -2690,14 +2690,14 @@ public class GUI extends JFrame{
 			            }
 			            JComboBox yearFolder = new JComboBox(yearChoice);
 						yearFolder.setBackground(SystemColor.controlHighlight);
-						yearFolder.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+						yearFolder.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 						yearFolder.setBounds(187, 96, 212, 29);
 						view.add(yearFolder);
 						yearFolder.repaint();
 						
-						JButton checkFile = new JButton("¬d¸ß");
+						JButton checkFile = new JButton("æŸ¥è©¢");
 						checkFile.setBackground(SystemColor.controlHighlight);
-						checkFile.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						checkFile.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						checkFile.setBounds(411, 96, 77, 29);
 						view.add(checkFile);
 						checkFile.repaint();
@@ -2707,8 +2707,8 @@ public class GUI extends JFrame{
 				};
 				Yes.addActionListener(chooseYes);
 				
-				JButton No = new JButton("§_");
-				No.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton No = new JButton("å¦");
+				No.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				No.setBackground(SystemColor.controlHighlight);
 				No.setBounds(144, 68, 65, 31);
 				internalFrame.getContentPane().add(No);
@@ -2757,96 +2757,96 @@ public class GUI extends JFrame{
             view.removeAll();
 			view.repaint();
 			
-			JLabel changeLessonTitle = new JLabel("­×§ï½Òµ{");
-			changeLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel changeLessonTitle = new JLabel("ä¿®æ”¹èª²ç¨‹");
+			changeLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			changeLessonTitle.setBounds(197, 15, 105, 23);
 			view.add(changeLessonTitle);
 			changeLessonTitle.repaint();
 			
-			JLabel newNum = new JLabel("¿é¤J§ó§ï¥N½X¡G");
-			newNum.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel newNum = new JLabel("è¼¸å…¥æ›´æ”¹ä»£ç¢¼ï¼š");
+			newNum.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			newNum.setBounds(71, 54, 140, 23);
 			view.add(newNum);
 			newNum.repaint();
 			
 			JTextField numIN = new JTextField();
-			numIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			numIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			numIN.setBounds(207, 53, 229, 24);
 			view.add(numIN);
 			numIN.setColumns(10);
 			numIN.repaint();
 			
-			JLabel newPoint = new JLabel("¿é¤J§ó§ï¾Ç¤À¡G");
-			newPoint.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel newPoint = new JLabel("è¼¸å…¥æ›´æ”¹å­¸åˆ†ï¼š");
+			newPoint.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			newPoint.setBounds(71, 99, 140, 23);
 			view.add(newPoint);
 			newPoint.repaint();
 			
 			JTextField PointIN = new JTextField();
-			PointIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			PointIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			PointIN.setColumns(10);
 			PointIN.setBounds(207, 98, 229, 24);
 			view.add(PointIN);
 			PointIN.repaint();
 			
-			JLabel newType = new JLabel("¿ï¾Ü§ó§ïÃş«¬¡G");
-			newType.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel newType = new JLabel("é¸æ“‡æ›´æ”¹é¡å‹ï¼š");
+			newType.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			newType.setBounds(71, 145, 140, 23);
 			view.add(newType);
 			newType.repaint();
 			
 			String[] typeWord = new String[3];
 			typeWord[0] = " ";
-			typeWord[1] = "¥²­×";
-			typeWord[2] = "¿ï­×";
+			typeWord[1] = "å¿…ä¿®";
+			typeWord[2] = "é¸ä¿®";
 			JComboBox TypeIN = new JComboBox(typeWord);
 			TypeIN.setBackground(SystemColor.controlHighlight);
-			TypeIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			TypeIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			TypeIN.setBounds(207, 144, 229, 29);
 			view.add(TypeIN);
 			TypeIN.repaint();
 			
-			JLabel newProName = new JLabel("¿é¤J§ó§ï±Ğ±Â¡G");
-			newProName.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel newProName = new JLabel("è¼¸å…¥æ›´æ”¹æ•™æˆï¼š");
+			newProName.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			newProName.setBounds(71, 190, 140, 23);
 			view.add(newProName);
 			newProName.repaint();
 			
 			JTextField newProNameIN = new JTextField();
-			newProNameIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newProNameIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newProNameIN.setColumns(10);
 			newProNameIN.setBounds(207, 189, 229, 24);
 			view.add(newProNameIN);
 			newProNameIN.repaint();
 			
-			JLabel newLesson = new JLabel("¿é¤J§ó§ï¦WºÙ¡G");
-			newLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel newLesson = new JLabel("è¼¸å…¥æ›´æ”¹åç¨±ï¼š");
+			newLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			newLesson.setBounds(71, 236, 140, 23);
 			view.add(newLesson);
 			newLesson.repaint();
 			
 			JTextField newLessonIN = new JTextField();
-			newLessonIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newLessonIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newLessonIN.setColumns(10);
 			newLessonIN.setBounds(207, 235, 229, 24);
 			view.add(newLessonIN);
 			newLessonIN.repaint();
 			
-			JLabel newWord = new JLabel("¿é¤J§ó§ï¤jºõ¡G");
-			newWord.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel newWord = new JLabel("è¼¸å…¥æ›´æ”¹å¤§ç¶±ï¼š");
+			newWord.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			newWord.setBounds(71, 281, 140, 23);
 			view.add(newWord);
 			newWord.repaint();
 			
 			JTextField newWordIN = new JTextField();
-			newWordIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			newWordIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			newWordIN.setColumns(10);
 			newWordIN.setBounds(207, 280, 229, 24);
 			view.add(newWordIN);
 			newWordIN.repaint();
 			
-			JButton changeLessonOK = new JButton("­×§ï");
-			changeLessonOK.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton changeLessonOK = new JButton("ä¿®æ”¹");
+			changeLessonOK.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			changeLessonOK.setBackground(SystemColor.controlHighlight);
 			changeLessonOK.setBounds(254, 319, 127, 31);
 			view.add(changeLessonOK);
@@ -2885,23 +2885,23 @@ public class GUI extends JFrame{
 					view.removeAll();
 					view.repaint();
 					
-					JLabel editLessonTitle = new JLabel("½s¿è½Òµ{");
-					editLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+					JLabel editLessonTitle = new JLabel("ç·¨è¼¯èª²ç¨‹");
+					editLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 					editLessonTitle.setBounds(200, 58, 118, 23);
 					view.add(editLessonTitle);
 					editLessonTitle.repaint();
 					
-					JButton buildLesson = new JButton("«Ø¥ß·s½Òµ{");
+					JButton buildLesson = new JButton("å»ºç«‹æ–°èª²ç¨‹");
 					buildLesson.setBackground(SystemColor.controlHighlight);
-					buildLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					buildLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					buildLesson.setBounds(65, 200, 134, 31);
 					view.add(buildLesson);
 					buildLesson.repaint();
 					BuildLesson build = new BuildLesson(view, client);
 					buildLesson.addActionListener(build);
 					
-					JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-					yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+					yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					yearChoose.setBounds(60, 99, 127, 23);
 					view.add(yearChoose);
 					yearChoose.repaint();
@@ -2920,14 +2920,14 @@ public class GUI extends JFrame{
 		            }
 		            JComboBox yearFolder = new JComboBox(yearChoice);
 					yearFolder.setBackground(SystemColor.controlHighlight);
-					yearFolder.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					yearFolder.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					yearFolder.setBounds(187, 96, 212, 29);
 					view.add(yearFolder);
 					yearFolder.repaint();
 					
-					JButton checkFile = new JButton("¬d¸ß");
+					JButton checkFile = new JButton("æŸ¥è©¢");
 					checkFile.setBackground(SystemColor.controlHighlight);
-					checkFile.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					checkFile.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkFile.setBounds(411, 96, 77, 29);
 					view.add(checkFile);
 					checkFile.repaint();
@@ -2937,8 +2937,8 @@ public class GUI extends JFrame{
 			};
 			changeLessonOK.addActionListener(changelessonGO);
 			
-			JButton back = new JButton("¦^¤W¤@­¶");
-			back.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton back = new JButton("å›ä¸Šä¸€é ");
+			back.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			back.setBackground(SystemColor.controlHighlight);
 			back.setBounds(112, 319, 127, 31);
 			view.add(back);
@@ -2963,14 +2963,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel ReadLessonTitle = new JLabel("¬d¬İ½Òµ{");
-			ReadLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel ReadLessonTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹");
+			ReadLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			ReadLessonTitle.setBounds(200, 15, 118, 23);
 			view.add(ReadLessonTitle);
 			ReadLessonTitle.repaint();
 			
-			JLabel YearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-			YearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel YearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+			YearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			YearChoose.setBounds(55, 50, 127, 23);
 			view.add(YearChoose);
 			YearChoose.repaint();
@@ -2989,14 +2989,14 @@ public class GUI extends JFrame{
             }
 			JComboBox yearChoiceBox = new JComboBox(yearChoice);
 			yearChoiceBox.setBackground(SystemColor.controlHighlight);
-			yearChoiceBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			yearChoiceBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			yearChoiceBox.setBounds(176, 47, 183, 29);
 			view.add(yearChoiceBox);
 			yearChoiceBox.repaint();
 			
-			JButton check = new JButton("¬d¸ß");
+			JButton check = new JButton("æŸ¥è©¢");
 			check.setBackground(SystemColor.controlHighlight);
-			check.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			check.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			check.setBounds(374, 47, 77, 29);
 			view.add(check);
 			check.repaint();
@@ -3042,28 +3042,28 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel ReadLessonTitle = new JLabel("¬d¬İ½Òµ{");
-				ReadLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel ReadLessonTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹");
+				ReadLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				ReadLessonTitle.setBounds(200, 15, 118, 23);
 				view.add(ReadLessonTitle);
 				ReadLessonTitle.repaint();
 				
-				JLabel YearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				YearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel YearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				YearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				YearChoose.setBounds(55, 50, 127, 23);
 				view.add(YearChoose);
 				YearChoose.repaint();
 				
 				JComboBox yearChoiceBox = new JComboBox(yearChoice);
 				yearChoiceBox.setBackground(SystemColor.controlHighlight);
-				yearChoiceBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				yearChoiceBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoiceBox.setBounds(176, 47, 183, 29);
 				view.add(yearChoiceBox);
 				yearChoiceBox.repaint();
 				
-				JButton check = new JButton("¬d¸ß");
+				JButton check = new JButton("æŸ¥è©¢");
 				check.setBackground(SystemColor.controlHighlight);
-				check.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				check.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				check.setBounds(374, 47, 77, 29);
 				view.add(check);
 				check.repaint();
@@ -3074,50 +3074,50 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel ReadLessonTitle = new JLabel("¬d¬İ½Òµ{");
-				ReadLessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel ReadLessonTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹");
+				ReadLessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				ReadLessonTitle.setBounds(200, 15, 118, 23);
 				view.add(ReadLessonTitle);
 				ReadLessonTitle.repaint();
 				
-				JLabel YearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				YearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel YearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				YearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				YearChoose.setBounds(55, 50, 127, 23);
 				view.add(YearChoose);
 				YearChoose.repaint();
 				
 				JComboBox yearChoiceBox = new JComboBox(yearChoice);
 				yearChoiceBox.setBackground(SystemColor.controlHighlight);
-				yearChoiceBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				yearChoiceBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoiceBox.setBounds(176, 47, 183, 29);
 				yearChoiceBox.setSelectedIndex(index);
 				view.add(yearChoiceBox);
 				yearChoiceBox.repaint();
 				
-				JButton check = new JButton("¬d¸ß");
+				JButton check = new JButton("æŸ¥è©¢");
 				check.setBackground(SystemColor.controlHighlight);
-				check.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				check.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				check.setBounds(374, 47, 77, 29);
 				view.add(check);
 				check.repaint();
 				LessonReadCheck checkIT = new LessonReadCheck(view, client, yearChoiceBox);
 				check.addActionListener(checkIT);
 				
-				JLabel LessonChoose = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-				LessonChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel LessonChoose = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+				LessonChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				LessonChoose.setBounds(55, 82, 127, 23);
 				view.add(LessonChoose);
 				LessonChoose.repaint();
 				
 				JComboBox lessonChoiceBox = new JComboBox(allLesson);
-				lessonChoiceBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				lessonChoiceBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				lessonChoiceBox.setBackground(SystemColor.controlHighlight);
 				lessonChoiceBox.setBounds(176, 81, 183, 29);
 				view.add(lessonChoiceBox);
 				lessonChoiceBox.repaint();
 				
-				JButton GoToFind = new JButton("¬d¬İ");
-				GoToFind.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton GoToFind = new JButton("æŸ¥çœ‹");
+				GoToFind.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				GoToFind.setBackground(SystemColor.controlHighlight);
 				GoToFind.setBounds(374, 80, 77, 29);
 				view.add(GoToFind);
@@ -3129,7 +3129,7 @@ public class GUI extends JFrame{
 							
 							JTextArea ViewArea = new JTextArea();
 							ViewArea.setText(wordToprint);
-							ViewArea.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 14));
+							ViewArea.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 14));
 							ViewArea.setBounds(65, 114, 386, 210);
 							view.add(ViewArea);
 							ViewArea.setEditable(false);
@@ -3164,17 +3164,17 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JButton ChooseLesson = new JButton("¿ï­×½Òµ{");
+				JButton ChooseLesson = new JButton("é¸ä¿®èª²ç¨‹");
 				ChooseLesson.setBackground(SystemColor.controlHighlight);
-				ChooseLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				ChooseLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				ChooseLesson.setBounds(176, 104, 153, 31);
 				view.add(ChooseLesson);
 				ChooseLesson.repaint();
 				ChooseLesson choose = new ChooseLesson(view, client);
 				ChooseLesson.addActionListener(choose);
 				
-				JButton deleteLessonChose = new JButton("½Òµ{°h¿ï");
-				deleteLessonChose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton deleteLessonChose = new JButton("èª²ç¨‹é€€é¸");
+				deleteLessonChose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				deleteLessonChose.setBackground(SystemColor.controlHighlight);
 				deleteLessonChose.setBounds(176, 178, 153, 31);
 				view.add(deleteLessonChose);
@@ -3200,27 +3200,27 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel chooseNewOneTitle = new JLabel("¿ï­×½Òµ{");
-				chooseNewOneTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel chooseNewOneTitle = new JLabel("é¸ä¿®èª²ç¨‹");
+				chooseNewOneTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				chooseNewOneTitle.setBounds(198, 53, 118, 23);
 				view.add(chooseNewOneTitle);
 				chooseNewOneTitle.repaint();
 				
-				JLabel stuAccount = new JLabel("½Ğ¿é¤J¿ï­×¾Ç¥Í±b¸¹¡G");
-				stuAccount.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel stuAccount = new JLabel("è«‹è¼¸å…¥é¸ä¿®å­¸ç”Ÿå¸³è™Ÿï¼š");
+				stuAccount.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				stuAccount.setBounds(28, 104, 211, 23);
 				view.add(stuAccount);
 				stuAccount.repaint();
 				
 				JTextField stuAccountIN = new JTextField();
-				stuAccountIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				stuAccountIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				stuAccountIN.setBounds(232, 105, 245, 24);
 				view.add(stuAccountIN);
 				stuAccountIN.setColumns(10);
 				stuAccountIN.repaint();
 				
-				JLabel lessonYear = new JLabel("½Ğ¿ï¾Ü½Òµ{¤§¾Ç´Á¡G");
-				lessonYear.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel lessonYear = new JLabel("è«‹é¸æ“‡èª²ç¨‹ä¹‹å­¸æœŸï¼š");
+				lessonYear.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				lessonYear.setBounds(48, 154, 180, 23);
 				view.add(lessonYear);
 				lessonYear.repaint();
@@ -3239,14 +3239,14 @@ public class GUI extends JFrame{
 	            }
 	            
 				JComboBox lessonYearIN = new JComboBox(yearChoice);
-				lessonYearIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				lessonYearIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				lessonYearIN.setBackground(SystemColor.controlHighlight);
 				lessonYearIN.setBounds(232, 153, 161, 29);
 				view.add(lessonYearIN);
 				lessonYearIN.repaint();
 				
-				JButton checkLesson = new JButton("¬d¸ß");
-				checkLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton checkLesson = new JButton("æŸ¥è©¢");
+				checkLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkLesson.setBackground(SystemColor.controlHighlight);
 				checkLesson.setBounds(396, 152, 81, 29);
 				view.add(checkLesson);
@@ -3254,9 +3254,9 @@ public class GUI extends JFrame{
 				LessonChooseCheck check = new LessonChooseCheck(view, client, lessonYearIN, stuAccountIN);
 				checkLesson.addActionListener(check);
 				
-				JButton goback = new JButton("¦^¤W¤@­¶");
+				JButton goback = new JButton("å›ä¸Šä¸€é ");
 				goback.setBackground(SystemColor.controlHighlight);
-				goback.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				goback.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				goback.setBounds(42, 267, 153, 31);
 				view.add(goback);
 				goback.repaint();
@@ -3302,42 +3302,42 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel chooseNewOneTitle = new JLabel("¿ï­×½Òµ{");
-				chooseNewOneTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel chooseNewOneTitle = new JLabel("é¸ä¿®èª²ç¨‹");
+				chooseNewOneTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				chooseNewOneTitle.setBounds(198, 53, 118, 23);
 				view.add(chooseNewOneTitle);
 				chooseNewOneTitle.repaint();
 				
-				JLabel stuAccount = new JLabel("½Ğ¿é¤J¿ï­×¾Ç¥Í±b¸¹¡G");
-				stuAccount.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel stuAccount = new JLabel("è«‹è¼¸å…¥é¸ä¿®å­¸ç”Ÿå¸³è™Ÿï¼š");
+				stuAccount.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				stuAccount.setBounds(28, 104, 211, 23);
 				view.add(stuAccount);
 				stuAccount.repaint();
 				
 				JTextField stuAccountIN = new JTextField();
-				stuAccountIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				stuAccountIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				stuAccountIN.setBounds(232, 105, 245, 24);
 				stuAccountIN.setText(account);
 				view.add(stuAccountIN);
 				stuAccountIN.setColumns(10);
 				stuAccountIN.repaint();
 				
-				JLabel lessonYear = new JLabel("½Ğ¿ï¾Ü½Òµ{¤§¾Ç´Á¡G");
-				lessonYear.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel lessonYear = new JLabel("è«‹é¸æ“‡èª²ç¨‹ä¹‹å­¸æœŸï¼š");
+				lessonYear.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				lessonYear.setBounds(48, 154, 180, 23);
 				view.add(lessonYear);
 				lessonYear.repaint();
 				
 				JComboBox lessonYearIN = new JComboBox(yearChoice);
-				lessonYearIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				lessonYearIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				lessonYearIN.setBackground(SystemColor.controlHighlight);
 				lessonYearIN.setBounds(232, 153, 161, 29);
 				lessonYearIN.setSelectedIndex(index);
 				view.add(lessonYearIN);
 				lessonYearIN.repaint();
 				
-				JButton checkLesson = new JButton("¬d¸ß");
-				checkLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton checkLesson = new JButton("æŸ¥è©¢");
+				checkLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkLesson.setBackground(SystemColor.controlHighlight);
 				checkLesson.setBounds(396, 152, 81, 29);
 				view.add(checkLesson);
@@ -3345,31 +3345,31 @@ public class GUI extends JFrame{
 				LessonChooseCheck check = new LessonChooseCheck(view, client, lessonYearIN, stuAccountIN);
 				checkLesson.addActionListener(check);
 				
-				JLabel lessonChooseNew = new JLabel("½Ğ¿ï¾Ü±ı­×²ß¤§½Òµ{¡G");
-				lessonChooseNew.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel lessonChooseNew = new JLabel("è«‹é¸æ“‡æ¬²ä¿®ç¿’ä¹‹èª²ç¨‹ï¼š");
+				lessonChooseNew.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				lessonChooseNew.setBounds(28, 209, 200, 23);
 				view.add(lessonChooseNew);
 				lessonChooseNew.repaint();
 				
 				String[] showallLesson = client.showAllLesson(yearChoice[lessonYearIN.getSelectedIndex()]);
 				JComboBox lessonChooseIN = new JComboBox(showallLesson);
-				lessonChooseIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				lessonChooseIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				lessonChooseIN.setBackground(SystemColor.controlHighlight);
 				lessonChooseIN.setBounds(232, 208, 245, 29);
 				view.add(lessonChooseIN);
 				lessonChooseIN.repaint();
 				
-				JButton goback = new JButton("¦^¤W¤@­¶");
+				JButton goback = new JButton("å›ä¸Šä¸€é ");
 				goback.setBackground(SystemColor.controlHighlight);
-				goback.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				goback.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				goback.setBounds(42, 267, 153, 31);
 				view.add(goback);
 				goback.repaint();
 				LessonChoose choose = new LessonChoose(view, client);
 				goback.addActionListener(choose);
 				
-				JButton choseIT = new JButton("¿ï½Ò");
-				choseIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton choseIT = new JButton("é¸èª²");
+				choseIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				choseIT.setBackground(SystemColor.controlHighlight);
 				choseIT.setBounds(284, 267, 153, 31);
 				view.add(choseIT);
@@ -3391,27 +3391,27 @@ public class GUI extends JFrame{
 						view.removeAll();
 						view.repaint();
 						
-						JLabel chooseNewOneTitle = new JLabel("¿ï­×½Òµ{");
-						chooseNewOneTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+						JLabel chooseNewOneTitle = new JLabel("é¸ä¿®èª²ç¨‹");
+						chooseNewOneTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 						chooseNewOneTitle.setBounds(198, 53, 118, 23);
 						view.add(chooseNewOneTitle);
 						chooseNewOneTitle.repaint();
 						
-						JLabel stuAccount = new JLabel("½Ğ¿é¤J¿ï­×¾Ç¥Í±b¸¹¡G");
-						stuAccount.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+						JLabel stuAccount = new JLabel("è«‹è¼¸å…¥é¸ä¿®å­¸ç”Ÿå¸³è™Ÿï¼š");
+						stuAccount.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 						stuAccount.setBounds(28, 104, 211, 23);
 						view.add(stuAccount);
 						stuAccount.repaint();
 						
 						JTextField stuAccountIN = new JTextField();
-						stuAccountIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						stuAccountIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						stuAccountIN.setBounds(232, 105, 245, 24);
 						view.add(stuAccountIN);
 						stuAccountIN.setColumns(10);
 						stuAccountIN.repaint();
 						
-						JLabel lessonYear = new JLabel("½Ğ¿ï¾Ü½Òµ{¤§¾Ç´Á¡G");
-						lessonYear.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+						JLabel lessonYear = new JLabel("è«‹é¸æ“‡èª²ç¨‹ä¹‹å­¸æœŸï¼š");
+						lessonYear.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 						lessonYear.setBounds(48, 154, 180, 23);
 						view.add(lessonYear);
 						lessonYear.repaint();
@@ -3430,14 +3430,14 @@ public class GUI extends JFrame{
 			            }
 			            
 						JComboBox lessonYearIN = new JComboBox(yearChoice);
-						lessonYearIN.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						lessonYearIN.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						lessonYearIN.setBackground(SystemColor.controlHighlight);
 						lessonYearIN.setBounds(232, 153, 161, 29);
 						view.add(lessonYearIN);
 						lessonYearIN.repaint();
 						
-						JButton checkLesson = new JButton("¬d¸ß");
-						checkLesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						JButton checkLesson = new JButton("æŸ¥è©¢");
+						checkLesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						checkLesson.setBackground(SystemColor.controlHighlight);
 						checkLesson.setBounds(396, 152, 81, 29);
 						view.add(checkLesson);
@@ -3445,9 +3445,9 @@ public class GUI extends JFrame{
 						LessonChooseCheck check = new LessonChooseCheck(view, client, lessonYearIN, stuAccountIN);
 						checkLesson.addActionListener(check);
 						
-						JButton goback = new JButton("¦^¤W¤@­¶");
+						JButton goback = new JButton("å›ä¸Šä¸€é ");
 						goback.setBackground(SystemColor.controlHighlight);
-						goback.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+						goback.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 						goback.setBounds(42, 267, 153, 31);
 						view.add(goback);
 						goback.repaint();
@@ -3475,27 +3475,27 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel deleteALessonTitle = new JLabel("½Òµ{°h¿ï");
-			deleteALessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel deleteALessonTitle = new JLabel("èª²ç¨‹é€€é¸");
+			deleteALessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			deleteALessonTitle.setBounds(198, 53, 118, 23);
 			view.add(deleteALessonTitle);
 			deleteALessonTitle.repaint();
 			
-			JLabel stuAccount_1 = new JLabel("½Ğ¿é¤J¿ï­×¾Ç¥Í±b¸¹¡G");
-			stuAccount_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel stuAccount_1 = new JLabel("è«‹è¼¸å…¥é¸ä¿®å­¸ç”Ÿå¸³è™Ÿï¼š");
+			stuAccount_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			stuAccount_1.setBounds(28, 104, 211, 23);
 			view.add(stuAccount_1);
 			stuAccount_1.repaint();
 			
 			JTextField stuAccountIN_1 = new JTextField();
-			stuAccountIN_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			stuAccountIN_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			stuAccountIN_1.setBounds(232, 105, 245, 24);
 			view.add(stuAccountIN_1);
 			stuAccountIN_1.setColumns(10);
 			stuAccountIN_1.repaint();
 			
-			JLabel lessonYear_1 = new JLabel("½Ğ¿ï¾Ü½Òµ{¤§¾Ç´Á¡G");
-			lessonYear_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel lessonYear_1 = new JLabel("è«‹é¸æ“‡èª²ç¨‹ä¹‹å­¸æœŸï¼š");
+			lessonYear_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			lessonYear_1.setBounds(48, 154, 180, 23);
 			view.add(lessonYear_1);
 			lessonYear_1.repaint();
@@ -3514,24 +3514,24 @@ public class GUI extends JFrame{
             }
             
 			JComboBox lessonYearIN_1 = new JComboBox(yearChoice);
-			lessonYearIN_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			lessonYearIN_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			lessonYearIN_1.setBackground(SystemColor.controlHighlight);
 			lessonYearIN_1.setBounds(232, 153, 161, 29);
 			view.add(lessonYearIN_1);
 			lessonYearIN_1.repaint();
 			
-			JButton checkLesson_1 = new JButton("¬d¸ß");
+			JButton checkLesson_1 = new JButton("æŸ¥è©¢");
 			checkLesson_1.setBackground(SystemColor.controlHighlight);
-			checkLesson_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			checkLesson_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkLesson_1.setBounds(396, 152, 81, 29);
 			view.add(checkLesson_1);
 			checkLesson_1.repaint();
 			LessonDeleteCheck check = new LessonDeleteCheck(view, client, lessonYearIN_1, stuAccountIN_1);
 			checkLesson_1.addActionListener(check);
 			
-			JButton goback = new JButton("¦^¤W¤@­¶");
+			JButton goback = new JButton("å›ä¸Šä¸€é ");
 			goback.setBackground(SystemColor.controlHighlight);
-			goback.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			goback.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			goback.setBounds(42, 267, 153, 31);
 			view.add(goback);
 			goback.repaint();
@@ -3577,164 +3577,166 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel deleteALessonTitle = new JLabel("½Òµ{°h¿ï");
-			deleteALessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel deleteALessonTitle = new JLabel("èª²ç¨‹é€€é¸");
+			deleteALessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			deleteALessonTitle.setBounds(198, 53, 118, 23);
 			view.add(deleteALessonTitle);
 			deleteALessonTitle.repaint();
 			
-			JLabel stuAccount_1 = new JLabel("½Ğ¿é¤J¿ï­×¾Ç¥Í±b¸¹¡G");
-			stuAccount_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel stuAccount_1 = new JLabel("è«‹è¼¸å…¥é¸ä¿®å­¸ç”Ÿå¸³è™Ÿï¼š");
+			stuAccount_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			stuAccount_1.setBounds(28, 104, 211, 23);
 			view.add(stuAccount_1);
 			stuAccount_1.repaint();
 			
 			JTextField stuAccountIN_1 = new JTextField();
-			stuAccountIN_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			stuAccountIN_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			stuAccountIN_1.setBounds(232, 105, 245, 24);
 			stuAccountIN_1.setText(account);
 			view.add(stuAccountIN_1);
 			stuAccountIN_1.setColumns(10);
 			stuAccountIN_1.repaint();
 			
-			JLabel lessonYear_1 = new JLabel("½Ğ¿ï¾Ü½Òµ{¤§¾Ç´Á¡G");
-			lessonYear_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel lessonYear_1 = new JLabel("è«‹é¸æ“‡èª²ç¨‹ä¹‹å­¸æœŸï¼š");
+			lessonYear_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			lessonYear_1.setBounds(48, 154, 180, 23);
 			view.add(lessonYear_1);
 			lessonYear_1.repaint();
 			
 			JComboBox lessonYearIN_1 = new JComboBox(yearChoice);
-			lessonYearIN_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			lessonYearIN_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			lessonYearIN_1.setBackground(SystemColor.controlHighlight);
 			lessonYearIN_1.setBounds(232, 153, 161, 29);
 			lessonYearIN_1.setSelectedIndex(index);
 			view.add(lessonYearIN_1);
 			lessonYearIN_1.repaint();
 			
-			JButton checkLesson_1 = new JButton("¬d¸ß");
+			JButton checkLesson_1 = new JButton("æŸ¥è©¢");
 			checkLesson_1.setBackground(SystemColor.controlHighlight);
-			checkLesson_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			checkLesson_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkLesson_1.setBounds(396, 152, 81, 29);
 			view.add(checkLesson_1);
 			checkLesson_1.repaint();
 			LessonDeleteCheck check = new LessonDeleteCheck(view, client, lessonYearIN_1, stuAccountIN_1);
 			checkLesson_1.addActionListener(check);
 			
-			Student stuDeleteLesson = client.readStuFileID(stuAccountIN_1.getText());
-			ArrayList<String> place = new ArrayList<String>();
-			for (int i = 0; i < stuDeleteLesson.lesson.size(); i++) {
-				ArrayList<String> getData = stuDeleteLesson.lesson.get(i);
-				if (getData.get(0).equals(yearChoice[lessonYearIN_1.getSelectedIndex()])) {
-					place = getData;
-					break;
-				}
-			}
-			int x = stuDeleteLesson.lesson.indexOf(place);
-			String[] showallLesson;
-			if (x != -1) {
-				ArrayList<String> readLesson = stuDeleteLesson.lesson.get(x);
-				showallLesson = new String[readLesson.size()];
-				showallLesson[0] = " ";
-				for (int p = 1; p < readLesson.size(); p++) {
-					showallLesson[p] = readLesson.get(p);
-				}
-			}
-			else {
-				showallLesson = new String[1];
-				showallLesson[0] = " ";
-			}
-			
-			JButton goback = new JButton("¦^¤W¤@­¶");
+			JButton goback = new JButton("å›ä¸Šä¸€é ");
 			goback.setBackground(SystemColor.controlHighlight);
-			goback.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			goback.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			goback.setBounds(42, 267, 153, 31);
 			view.add(goback);
 			goback.repaint();
 			LessonChoose choose = new LessonChoose(view, client);
 			goback.addActionListener(choose);
 			
-			JLabel lessonChooseNew_1 = new JLabel("½Ğ¿ï¾Ü±ı°h¿ï¤§½Òµ{¡G");
-			lessonChooseNew_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
-			lessonChooseNew_1.setBounds(28, 209, 200, 23);
-			view.add(lessonChooseNew_1);
-			lessonChooseNew_1.repaint();
-			
-			JComboBox lessonChooseIN_1 = new JComboBox(showallLesson);
-			lessonChooseIN_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
-			lessonChooseIN_1.setBackground(SystemColor.controlHighlight);
-			lessonChooseIN_1.setBounds(232, 208, 245, 29);
-			view.add(lessonChooseIN_1);
-			lessonChooseIN_1.repaint();
-			
-			JButton deleteITTTTTT = new JButton("°h¿ï");
-			deleteITTTTTT.setForeground(Color.RED);
-			deleteITTTTTT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
-			deleteITTTTTT.setBackground(SystemColor.controlHighlight);
-			deleteITTTTTT.setBounds(284, 267, 153, 31);
-			view.add(deleteITTTTTT);
-			deleteITTTTTT.repaint();
-			ActionListener delete_lesson_GO = new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					Lesson lessonDeleteGO = client.findLessonData(yearChoice[lessonYearIN_1.getSelectedIndex()], showallLesson[lessonChooseIN_1.getSelectedIndex()]);
-					boolean duckduckGoOk = client.removeLesson(lessonDeleteGO, stuDeleteLesson);
-					DeleteLessonNoteGUI duckduckDOIT = new DeleteLessonNoteGUI();
-					duckduckDOIT.run(duckduckGoOk);
-					
-					view.removeAll();
-					view.repaint();
-					
-					JLabel deleteALessonTitle = new JLabel("½Òµ{°h¿ï");
-					deleteALessonTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
-					deleteALessonTitle.setBounds(198, 53, 118, 23);
-					view.add(deleteALessonTitle);
-					deleteALessonTitle.repaint();
-					
-					JLabel stuAccount_1 = new JLabel("½Ğ¿é¤J¿ï­×¾Ç¥Í±b¸¹¡G");
-					stuAccount_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
-					stuAccount_1.setBounds(28, 104, 211, 23);
-					view.add(stuAccount_1);
-					stuAccount_1.repaint();
-					
-					JTextField stuAccountIN_1 = new JTextField();
-					stuAccountIN_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
-					stuAccountIN_1.setBounds(232, 105, 245, 24);
-					view.add(stuAccountIN_1);
-					stuAccountIN_1.setColumns(10);
-					stuAccountIN_1.repaint();
-					
-					JLabel lessonYear_1 = new JLabel("½Ğ¿ï¾Ü½Òµ{¤§¾Ç´Á¡G");
-					lessonYear_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
-					lessonYear_1.setBounds(48, 154, 180, 23);
-					view.add(lessonYear_1);
-					lessonYear_1.repaint();
-					
-					JComboBox lessonYearIN_1 = new JComboBox(yearChoice);
-					lessonYearIN_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
-					lessonYearIN_1.setBackground(SystemColor.controlHighlight);
-					lessonYearIN_1.setBounds(232, 153, 161, 29);
-					view.add(lessonYearIN_1);
-					lessonYearIN_1.repaint();
-					
-					JButton checkLesson_1 = new JButton("¬d¸ß");
-					checkLesson_1.setBackground(SystemColor.controlHighlight);
-					checkLesson_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
-					checkLesson_1.setBounds(396, 152, 81, 29);
-					view.add(checkLesson_1);
-					checkLesson_1.repaint();
-					LessonDeleteCheck check = new LessonDeleteCheck(view, client, lessonYearIN_1, stuAccountIN_1);
-					checkLesson_1.addActionListener(check);
-					
-					JButton goback = new JButton("¦^¤W¤@­¶");
-					goback.setBackground(SystemColor.controlHighlight);
-					goback.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
-					goback.setBounds(42, 267, 153, 31);
-					view.add(goback);
-					goback.repaint();
-					LessonChoose choose = new LessonChoose(view, client);
-					goback.addActionListener(choose);
+			Student stuDeleteLesson = client.readStuFileID(stuAccountIN_1.getText());
+			if (stuDeleteLesson != null) {
+				ArrayList<String> place = new ArrayList<String>();
+				for (int i = 0; i < stuDeleteLesson.lesson.size(); i++) {
+					ArrayList<String> getData = stuDeleteLesson.lesson.get(i);
+					if (getData.get(0).equals(yearChoice[lessonYearIN_1.getSelectedIndex()])) {
+						place = getData;
+						break;
+					}
+				}
+				int x = stuDeleteLesson.lesson.indexOf(place);
+				String[] showallLesson;
+				if (x != -1) {
+					ArrayList<String> readLesson = stuDeleteLesson.lesson.get(x);
+					showallLesson = new String[readLesson.size()];
+					showallLesson[0] = " ";
+					for (int p = 1; p < readLesson.size(); p++) {
+						showallLesson[p] = readLesson.get(p);
+					}
+				}
+				else {
+					showallLesson = new String[1];
+					showallLesson[0] = " ";
+				}
+				
+				JLabel lessonChooseNew_1 = new JLabel("è«‹é¸æ“‡æ¬²é€€é¸ä¹‹èª²ç¨‹ï¼š");
+				lessonChooseNew_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
+				lessonChooseNew_1.setBounds(28, 209, 200, 23);
+				view.add(lessonChooseNew_1);
+				lessonChooseNew_1.repaint();
+				
+				JComboBox lessonChooseIN_1 = new JComboBox(showallLesson);
+				lessonChooseIN_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
+				lessonChooseIN_1.setBackground(SystemColor.controlHighlight);
+				lessonChooseIN_1.setBounds(232, 208, 245, 29);
+				view.add(lessonChooseIN_1);
+				lessonChooseIN_1.repaint();
+				
+				JButton deleteITTTTTT = new JButton("é€€é¸");
+				deleteITTTTTT.setForeground(Color.RED);
+				deleteITTTTTT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
+				deleteITTTTTT.setBackground(SystemColor.controlHighlight);
+				deleteITTTTTT.setBounds(284, 267, 153, 31);
+				view.add(deleteITTTTTT);
+				deleteITTTTTT.repaint();
+				ActionListener delete_lesson_GO = new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						Lesson lessonDeleteGO = client.findLessonData(yearChoice[lessonYearIN_1.getSelectedIndex()], showallLesson[lessonChooseIN_1.getSelectedIndex()]);
+						boolean duckduckGoOk = client.removeLesson(lessonDeleteGO, stuDeleteLesson);
+						DeleteLessonNoteGUI duckduckDOIT = new DeleteLessonNoteGUI();
+						duckduckDOIT.run(duckduckGoOk);
+						
+						view.removeAll();
+						view.repaint();
+						
+						JLabel deleteALessonTitle = new JLabel("èª²ç¨‹é€€é¸");
+						deleteALessonTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
+						deleteALessonTitle.setBounds(198, 53, 118, 23);
+						view.add(deleteALessonTitle);
+						deleteALessonTitle.repaint();
+						
+						JLabel stuAccount_1 = new JLabel("è«‹è¼¸å…¥é¸ä¿®å­¸ç”Ÿå¸³è™Ÿï¼š");
+						stuAccount_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
+						stuAccount_1.setBounds(28, 104, 211, 23);
+						view.add(stuAccount_1);
+						stuAccount_1.repaint();
+						
+						JTextField stuAccountIN_1 = new JTextField();
+						stuAccountIN_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
+						stuAccountIN_1.setBounds(232, 105, 245, 24);
+						view.add(stuAccountIN_1);
+						stuAccountIN_1.setColumns(10);
+						stuAccountIN_1.repaint();
+						
+						JLabel lessonYear_1 = new JLabel("è«‹é¸æ“‡èª²ç¨‹ä¹‹å­¸æœŸï¼š");
+						lessonYear_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
+						lessonYear_1.setBounds(48, 154, 180, 23);
+						view.add(lessonYear_1);
+						lessonYear_1.repaint();
+						
+						JComboBox lessonYearIN_1 = new JComboBox(yearChoice);
+						lessonYearIN_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
+						lessonYearIN_1.setBackground(SystemColor.controlHighlight);
+						lessonYearIN_1.setBounds(232, 153, 161, 29);
+						view.add(lessonYearIN_1);
+						lessonYearIN_1.repaint();
+						
+						JButton checkLesson_1 = new JButton("æŸ¥è©¢");
+						checkLesson_1.setBackground(SystemColor.controlHighlight);
+						checkLesson_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
+						checkLesson_1.setBounds(396, 152, 81, 29);
+						view.add(checkLesson_1);
+						checkLesson_1.repaint();
+						LessonDeleteCheck check = new LessonDeleteCheck(view, client, lessonYearIN_1, stuAccountIN_1);
+						checkLesson_1.addActionListener(check);
+						
+						JButton goback = new JButton("å›ä¸Šä¸€é ");
+						goback.setBackground(SystemColor.controlHighlight);
+						goback.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
+						goback.setBounds(42, 267, 153, 31);
+						view.add(goback);
+						goback.repaint();
+						LessonChoose choose = new LessonChoose(view, client);
+						goback.addActionListener(choose);
+					};
 				};
-			};
-			deleteITTTTTT.addActionListener(delete_lesson_GO);
+				deleteITTTTTT.addActionListener(delete_lesson_GO);
+			}
 		}
 	}
 	
@@ -3758,16 +3760,16 @@ public class GUI extends JFrame{
 			int identity = identityIN.getSelectedIndex();
 			String[] option = new String[4];
 			option[0] = " ";
-			option[1] = "ºŞ²z­û";
-			option[2] = "±Ğ±Â";
-			option[3] = "¾Ç¥Í";
+			option[1] = "ç®¡ç†å“¡";
+			option[2] = "æ•™æˆ";
+			option[3] = "å­¸ç”Ÿ";
 			Manager user = (Manager)client.changeType(option[1]);
 			
 			view.removeAll();
 			view.repaint();
 			if (client.identity.equals(option[1])) {
-				JButton logINgrade = new JButton("µn¿ı¦¨ÁZ");
-				logINgrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton logINgrade = new JButton("ç™»éŒ„æˆç¸¾");
+				logINgrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				logINgrade.setBackground(SystemColor.controlHighlight);
 				logINgrade.setBounds(173, 55, 153, 31);
 				view.add(logINgrade);
@@ -3775,17 +3777,17 @@ public class GUI extends JFrame{
 				SetGrade set = new SetGrade(view, user);
 				logINgrade.addActionListener(set);
 				
-				JButton gradeTXT = new JButton("²£¥Í¦¨ÁZ³æ");
+				JButton gradeTXT = new JButton("ç”¢ç”Ÿæˆç¸¾å–®");
 				gradeTXT.setBackground(SystemColor.controlHighlight);
-				gradeTXT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				gradeTXT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				gradeTXT.setBounds(173, 124, 153, 31);
 				view.add(gradeTXT);
 				gradeTXT.repaint();
 				GradeTXT TXTmake = new GradeTXT(view, user);
 				gradeTXT.addActionListener(TXTmake);
 				
-				JButton readStuGrade = new JButton("¬d¬İ¾Ç¥Í¦¨ÁZ");
-				readStuGrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton readStuGrade = new JButton("æŸ¥çœ‹å­¸ç”Ÿæˆç¸¾");
+				readStuGrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				readStuGrade.setBackground(SystemColor.controlHighlight);
 				readStuGrade.setBounds(173, 193, 153, 31);
 				view.add(readStuGrade);
@@ -3793,8 +3795,8 @@ public class GUI extends JFrame{
 				StuGradeRead readStu = new StuGradeRead(view, user);
 				readStuGrade.addActionListener(readStu);
 				
-				JButton readLessonGrade = new JButton("¬d¬İ½Òµ{¦¨ÁZ");
-				readLessonGrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton readLessonGrade = new JButton("æŸ¥çœ‹èª²ç¨‹æˆç¸¾");
+				readLessonGrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				readLessonGrade.setBackground(SystemColor.controlHighlight);
 				readLessonGrade.setBounds(173, 262, 153, 31);
 				view.add(readLessonGrade);
@@ -3804,8 +3806,8 @@ public class GUI extends JFrame{
 			}
 			
 			else if(client.identity.equals(option[2])) {
-				JButton logINgrade = new JButton("µn¿ı¦¨ÁZ");
-				logINgrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton logINgrade = new JButton("ç™»éŒ„æˆç¸¾");
+				logINgrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				logINgrade.setBackground(SystemColor.controlHighlight);
 				logINgrade.setBounds(173, 100, 153, 31);
 				view.add(logINgrade);
@@ -3813,8 +3815,8 @@ public class GUI extends JFrame{
 				SetGradePro set = new SetGradePro(view, user, client);
 				logINgrade.addActionListener(set);
 				
-				JButton readLessonGrade = new JButton("¬d¬İ½Òµ{¦¨ÁZ");
-				readLessonGrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton readLessonGrade = new JButton("æŸ¥çœ‹èª²ç¨‹æˆç¸¾");
+				readLessonGrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				readLessonGrade.setBackground(SystemColor.controlHighlight);
 				readLessonGrade.setBounds(173, 200, 153, 31);
 				view.add(readLessonGrade);
@@ -3824,17 +3826,17 @@ public class GUI extends JFrame{
 			}
 			
 			else if(client.identity.equals(option[3])) {
-				JButton gradeTXT = new JButton("²£¥Í¦¨ÁZ³æ");
+				JButton gradeTXT = new JButton("ç”¢ç”Ÿæˆç¸¾å–®");
 				gradeTXT.setBackground(SystemColor.controlHighlight);
-				gradeTXT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				gradeTXT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				gradeTXT.setBounds(173, 124, 153, 31);
 				view.add(gradeTXT);
 				gradeTXT.repaint();
 				GradeTXTStu grade = new GradeTXTStu(view, user, client);
 				gradeTXT.addActionListener(grade);
 				
-				JButton readStuGrade = new JButton("¬d¬İ¦¨ÁZ");
-				readStuGrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton readStuGrade = new JButton("æŸ¥çœ‹æˆç¸¾");
+				readStuGrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				readStuGrade.setBackground(SystemColor.controlHighlight);
 				readStuGrade.setBounds(173, 200, 153, 31);
 				view.add(readStuGrade);
@@ -3861,14 +3863,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-			putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+			putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			putGradeINTitle.setBounds(210, 37, 106, 23);
 			view.add(putGradeINTitle);
 			putGradeINTitle.repaint();
 			
-			JLabel yearChooooose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-			yearChooooose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel yearChooooose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+			yearChooooose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			yearChooooose.setBounds(73, 86, 128, 23);
 			view.add(yearChooooose);
 			yearChooooose.repaint();
@@ -3887,15 +3889,15 @@ public class GUI extends JFrame{
             }
             
 			JComboBox YEARcomboBox = new JComboBox(yearChoice);
-			YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			YEARcomboBox.setBackground(SystemColor.controlHighlight);
 			YEARcomboBox.setBounds(192, 85, 173, 29);
 			view.add(YEARcomboBox);
 			YEARcomboBox.repaint();
 			
-			JButton checkIT = new JButton("¬d¸ß");
+			JButton checkIT = new JButton("æŸ¥è©¢");
 			checkIT.setBackground(SystemColor.controlHighlight);
-			checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkIT.setBounds(377, 84, 80, 31);
 			view.add(checkIT);
 			checkIT.repaint();
@@ -3939,29 +3941,29 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-				putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+				putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				putGradeINTitle.setBounds(210, 37, 106, 23);
 				view.add(putGradeINTitle);
 				putGradeINTitle.repaint();
 				
-				JLabel yearChooooose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				yearChooooose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel yearChooooose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				yearChooooose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChooooose.setBounds(73, 86, 128, 23);
 				view.add(yearChooooose);
 				yearChooooose.repaint();
 				
 				JComboBox YEARcomboBox = new JComboBox(yearChoice);
-				YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARcomboBox.setBackground(SystemColor.controlHighlight);
 				YEARcomboBox.setBounds(192, 85, 173, 29);
 				YEARcomboBox.setSelectedIndex(index);
 				view.add(YEARcomboBox);
 				YEARcomboBox.repaint();
 				
-				JButton checkIT = new JButton("¬d¸ß");
+				JButton checkIT = new JButton("æŸ¥è©¢");
 				checkIT.setBackground(SystemColor.controlHighlight);
-				checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkIT.setBounds(377, 84, 80, 31);
 				view.add(checkIT);
 				checkIT.repaint();
@@ -3969,21 +3971,21 @@ public class GUI extends JFrame{
 				checkIT.addActionListener(check);
 				
 				if (YEARcomboBox.getSelectedIndex() != 0) {
-					JLabel lessonChoose = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-					lessonChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel lessonChoose = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+					lessonChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lessonChoose.setBounds(73, 129, 128, 23);
 					view.add(lessonChoose);
 					lessonChoose.repaint();
 					
 					JComboBox LESSONcomboBox = new JComboBox(allLesson);
-					LESSONcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					LESSONcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					LESSONcomboBox.setBackground(SystemColor.controlHighlight);
 					LESSONcomboBox.setBounds(192, 128, 173, 29);
 					view.add(LESSONcomboBox);
 					LESSONcomboBox.repaint();
 					
-					JButton checkGO = new JButton("¬d¬İ");
-					checkGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton checkGO = new JButton("æŸ¥çœ‹");
+					checkGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					checkGO.setBackground(SystemColor.controlHighlight);
 					checkGO.setBounds(377, 127, 80, 31);
 					view.add(checkGO);
@@ -4032,51 +4034,51 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-			putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+			putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			putGradeINTitle.setBounds(210, 37, 106, 23);
 			view.add(putGradeINTitle);
 			putGradeINTitle.repaint();
 			
-			JLabel yearChooooose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-			yearChooooose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel yearChooooose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+			yearChooooose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			yearChooooose.setBounds(73, 86, 128, 23);
 			view.add(yearChooooose);
 			yearChooooose.repaint();
 			
 			JComboBox YEARcomboBox = new JComboBox(yearChoice);
-			YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			YEARcomboBox.setBackground(SystemColor.controlHighlight);
 			YEARcomboBox.setBounds(192, 85, 173, 29);
 			YEARcomboBox.setSelectedIndex(index_year);
 			view.add(YEARcomboBox);
 			YEARcomboBox.repaint();
 			
-			JButton checkIT = new JButton("¬d¸ß");
+			JButton checkIT = new JButton("æŸ¥è©¢");
 			checkIT.setBackground(SystemColor.controlHighlight);
-			checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkIT.setBounds(377, 84, 80, 31);
 			view.add(checkIT);
 			checkIT.repaint();
 			SetGradeCheck check = new SetGradeCheck(view, client, YEARcomboBox);
 			checkIT.addActionListener(check);
 			
-			JLabel lessonChoose = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-			lessonChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel lessonChoose = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+			lessonChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			lessonChoose.setBounds(73, 129, 128, 23);
 			view.add(lessonChoose);
 			lessonChoose.repaint();
 			
 			JComboBox LESSONcomboBox = new JComboBox(allLesson);
-			LESSONcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			LESSONcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			LESSONcomboBox.setBackground(SystemColor.controlHighlight);
 			LESSONcomboBox.setBounds(192, 128, 173, 29);
 			LESSONcomboBox.setSelectedIndex(index_lesson);
 			view.add(LESSONcomboBox);
 			LESSONcomboBox.repaint();
 			
-			JButton checkGO = new JButton("¬d¬İ");
-			checkGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton checkGO = new JButton("æŸ¥çœ‹");
+			checkGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkGO.setBackground(SystemColor.controlHighlight);
 			checkGO.setBounds(377, 127, 80, 31);
 			view.add(checkGO);
@@ -4085,8 +4087,8 @@ public class GUI extends JFrame{
 			checkGO.addActionListener(set);
 			
 			if (LESSONcomboBox.getSelectedIndex() != 0) {
-				JLabel stuChoose = new JLabel("½Ğ¿ï¾Ü¾Ç¥Í¡G");
-				stuChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel stuChoose = new JLabel("è«‹é¸æ“‡å­¸ç”Ÿï¼š");
+				stuChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				stuChoose.setBounds(73, 172, 128, 23);
 				view.add(stuChoose);
 				stuChoose.repaint();
@@ -4098,28 +4100,28 @@ public class GUI extends JFrame{
 					stuList[i+1] = choiceLesson.list.get(i).name;
 				}
 				JComboBox STUcomboBox = new JComboBox(stuList);
-				STUcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				STUcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				STUcomboBox.setBackground(SystemColor.controlHighlight);
 				STUcomboBox.setBounds(192, 171, 173, 29);
 				view.add(STUcomboBox);
 				STUcomboBox.repaint();
 				
-				JLabel GRADEin = new JLabel("½Ğ¿é¤J¦¨ÁZ¡G");
-				GRADEin.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel GRADEin = new JLabel("è«‹è¼¸å…¥æˆç¸¾ï¼š");
+				GRADEin.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				GRADEin.setBounds(73, 215, 128, 23);
 				view.add(GRADEin);
 				GRADEin.repaint();
 				
 				JTextField gradeININ = new JTextField();
 				gradeININ.setHorizontalAlignment(SwingConstants.CENTER);
-				gradeININ.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				gradeININ.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				gradeININ.setBounds(192, 215, 173, 24);
 				view.add(gradeININ);
 				gradeININ.setColumns(10);
 				gradeININ.repaint();
 				
-				JButton INgrade = new JButton("µn¿ı");
-				INgrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton INgrade = new JButton("ç™»éŒ„");
+				INgrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				INgrade.setBackground(SystemColor.controlHighlight);
 				INgrade.setBounds(279, 262, 153, 31);
 				view.add(INgrade);
@@ -4134,14 +4136,14 @@ public class GUI extends JFrame{
 							view.removeAll();
 							view.repaint();
 							
-							JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-							putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+							JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+							putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 							putGradeINTitle.setBounds(210, 37, 106, 23);
 							view.add(putGradeINTitle);
 							putGradeINTitle.repaint();
 							
-							JLabel yearChooooose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-							yearChooooose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+							JLabel yearChooooose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+							yearChooooose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 							yearChooooose.setBounds(73, 86, 128, 23);
 							view.add(yearChooooose);
 							yearChooooose.repaint();
@@ -4160,15 +4162,15 @@ public class GUI extends JFrame{
 				            }
 				            
 							JComboBox YEARcomboBox = new JComboBox(yearChoice);
-							YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+							YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 							YEARcomboBox.setBackground(SystemColor.controlHighlight);
 							YEARcomboBox.setBounds(192, 85, 173, 29);
 							view.add(YEARcomboBox);
 							YEARcomboBox.repaint();
 							
-							JButton checkIT = new JButton("¬d¸ß");
+							JButton checkIT = new JButton("æŸ¥è©¢");
 							checkIT.setBackground(SystemColor.controlHighlight);
-							checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+							checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 							checkIT.setBounds(377, 84, 80, 31);
 							view.add(checkIT);
 							checkIT.repaint();
@@ -4198,14 +4200,14 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel GradeTXTTitle = new JLabel("²£¥Í¦¨ÁZ³æ");
-				GradeTXTTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel GradeTXTTitle = new JLabel("ç”¢ç”Ÿæˆç¸¾å–®");
+				GradeTXTTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				GradeTXTTitle.setBounds(192, 71, 137, 23);
 				view.add(GradeTXTTitle);
 				GradeTXTTitle.repaint();
 				
-				JLabel yearDuck = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				yearDuck.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel yearDuck = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				yearDuck.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearDuck.setBounds(109, 130, 128, 23);
 				view.add(yearDuck);
 				yearDuck.repaint();
@@ -4224,27 +4226,27 @@ public class GUI extends JFrame{
 	            }
 	            
 				JComboBox YEARduckBox = new JComboBox(yearChoice);
-				YEARduckBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARduckBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARduckBox.setBackground(SystemColor.controlHighlight);
 				YEARduckBox.setBounds(228, 129, 173, 29);
 				view.add(YEARduckBox);
 				YEARduckBox.repaint();
 				
-				JLabel STUin = new JLabel("½Ğ¿é¤J¾Ç¥Í±b¸¹¡G");
-				STUin.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel STUin = new JLabel("è«‹è¼¸å…¥å­¸ç”Ÿå¸³è™Ÿï¼š");
+				STUin.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				STUin.setBounds(69, 175, 168, 23);
 				view.add(STUin);
 				STUin.repaint();
 				
 				JTextField STUinin = new JTextField();
-				STUinin.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				STUinin.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				STUinin.setBounds(228, 175, 173, 24);
 				view.add(STUinin);
 				STUinin.setColumns(10);
 				STUinin.repaint();
 				
-				JButton OutTXT = new JButton("²£¥Í¦¨ÁZ³æ");
-				OutTXT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton OutTXT = new JButton("ç”¢ç”Ÿæˆç¸¾å–®");
+				OutTXT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				OutTXT.setBackground(SystemColor.controlHighlight);
 				OutTXT.setBounds(279, 236, 153, 31);
 				view.add(OutTXT);
@@ -4291,14 +4293,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel GradeReadStuTitle = new JLabel("¬d¬İ¾Ç¥Í¦¨ÁZ");
-			GradeReadStuTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel GradeReadStuTitle = new JLabel("æŸ¥çœ‹å­¸ç”Ÿæˆç¸¾");
+			GradeReadStuTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			GradeReadStuTitle.setBounds(185, 15, 155, 23);
 			view.add(GradeReadStuTitle);
 			GradeReadStuTitle.repaint();
 			
-			JLabel year = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-			year.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel year = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+			year.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			year.setBounds(99, 54, 127, 23);
 			view.add(year);
 			year.repaint();
@@ -4317,27 +4319,27 @@ public class GUI extends JFrame{
             }
             
 			JComboBox YEARBox = new JComboBox(yearChoice);
-			YEARBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			YEARBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			YEARBox.setBackground(SystemColor.controlHighlight);
 			YEARBox.setBounds(220, 51, 210, 29);
 			view.add(YEARBox);
 			YEARBox.repaint();
 			
-			JLabel STUin = new JLabel("½Ğ¿é¤J¾Ç¥Í±b¸¹¡G");
-			STUin.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel STUin = new JLabel("è«‹è¼¸å…¥å­¸ç”Ÿå¸³è™Ÿï¼š");
+			STUin.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			STUin.setBounds(59, 86, 167, 23);
 			view.add(STUin);
 			STUin.repaint();
 			
 			JTextField STUinin = new JTextField();
-			STUinin.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			STUinin.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			STUinin.setBounds(220, 85, 210, 29);
 			view.add(STUinin);
 			STUinin.setColumns(10);
 			STUinin.repaint();
 			
-			JButton readITstuGO = new JButton("¬d¬İ");
-			readITstuGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton readITstuGO = new JButton("æŸ¥çœ‹");
+			readITstuGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			readITstuGO.setBackground(SystemColor.controlHighlight);
 			readITstuGO.setBounds(273, 311, 127, 31);
 			view.add(readITstuGO);
@@ -4351,7 +4353,7 @@ public class GUI extends JFrame{
 							
 							JTextArea ViewArea = new JTextArea();
 							ViewArea.setText(wordToprint);
-							ViewArea.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 14));
+							ViewArea.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 14));
 							ViewArea.setBounds(65, 114, 386, 193);
 							view.add(ViewArea);
 							ViewArea.setEditable(false);
@@ -4386,14 +4388,14 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel GradeReadStuTitle = new JLabel("¬d¬İ½Òµ{¦¨ÁZ");
-				GradeReadStuTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel GradeReadStuTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹æˆç¸¾");
+				GradeReadStuTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				GradeReadStuTitle.setBounds(185, 15, 155, 23);
 				view.add(GradeReadStuTitle);
 				GradeReadStuTitle.repaint();
 				
-				JLabel year = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				year.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel year = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				year.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				year.setBounds(52, 51, 127, 23);
 				view.add(year);
 				year.repaint();
@@ -4412,14 +4414,14 @@ public class GUI extends JFrame{
 	            }
 				
 				JComboBox YEARBox = new JComboBox(yearChoice);
-				YEARBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARBox.setBackground(SystemColor.controlHighlight);
 				YEARBox.setBounds(173, 48, 210, 29);
 				view.add(YEARBox);
 				YEARBox.repaint();
 				
-				JButton checkLessonGO = new JButton("¬d¸ß");
-				checkLessonGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton checkLessonGO = new JButton("æŸ¥è©¢");
+				checkLessonGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkLessonGO.setBackground(SystemColor.controlHighlight);
 				checkLessonGO.setBounds(401, 47, 77, 29);
 				view.add(checkLessonGO);
@@ -4462,28 +4464,28 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel GradeReadStuTitle = new JLabel("¬d¬İ½Òµ{¦¨ÁZ");
-			GradeReadStuTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel GradeReadStuTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹æˆç¸¾");
+			GradeReadStuTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			GradeReadStuTitle.setBounds(185, 15, 155, 23);
 			view.add(GradeReadStuTitle);
 			GradeReadStuTitle.repaint();
 			
-			JLabel year = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-			year.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel year = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+			year.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			year.setBounds(52, 51, 127, 23);
 			view.add(year);
 			year.repaint();
 			
 			JComboBox YEARBox = new JComboBox(yearChoice);
-			YEARBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			YEARBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			YEARBox.setBackground(SystemColor.controlHighlight);
 			YEARBox.setBounds(173, 48, 210, 29);
 			YEARBox.setSelectedIndex(index);
 			view.add(YEARBox);
 			YEARBox.repaint();
 			
-			JButton checkLessonGO = new JButton("¬d¸ß");
-			checkLessonGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton checkLessonGO = new JButton("æŸ¥è©¢");
+			checkLessonGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkLessonGO.setBackground(SystemColor.controlHighlight);
 			checkLessonGO.setBounds(401, 47, 77, 29);
 			view.add(checkLessonGO);
@@ -4492,21 +4494,21 @@ public class GUI extends JFrame{
 			checkLessonGO.addActionListener(go);
 			
 			if (YEARBox.getSelectedIndex() != 0) {
-				JLabel lesson = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-				lesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel lesson = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+				lesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				lesson.setBounds(52, 88, 127, 23);
 				view.add(lesson);
 				lesson.repaint();
 				
 				JComboBox LESSONBox = new JComboBox(allLesson);
-				LESSONBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				LESSONBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				LESSONBox.setBackground(SystemColor.controlHighlight);
 				LESSONBox.setBounds(173, 87, 210, 29);
 				view.add(LESSONBox);
 				LESSONBox.repaint();
 				
-				JButton readITlessonGO = new JButton("¬d¬İ");
-				readITlessonGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton readITlessonGO = new JButton("æŸ¥çœ‹");
+				readITlessonGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				readITlessonGO.setBackground(SystemColor.controlHighlight);
 				readITlessonGO.setBounds(401, 88, 77, 29);
 				view.add(readITlessonGO);
@@ -4518,7 +4520,7 @@ public class GUI extends JFrame{
 							
 							JTextArea ViewArea = new JTextArea();
 							ViewArea.setText(wordToprint);
-							ViewArea.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 14));
+							ViewArea.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 14));
 							ViewArea.setBounds(65, 114, 386, 193);
 							view.add(ViewArea);
 							ViewArea.setEditable(false);
@@ -4555,14 +4557,14 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 			
-				JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-				putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+				putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				putGradeINTitle.setBounds(210, 37, 106, 23);
 				view.add(putGradeINTitle);
 				putGradeINTitle.repaint();
 				
-				JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoose.setBounds(73, 86, 128, 23);
 				view.add(yearChoose);
 				yearChoose.repaint();
@@ -4581,15 +4583,15 @@ public class GUI extends JFrame{
 	            }
 	            
 				JComboBox YEARcomboBox = new JComboBox(yearChoice);
-				YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARcomboBox.setBackground(SystemColor.controlHighlight);
 				YEARcomboBox.setBounds(192, 85, 173, 29);
 				view.add(YEARcomboBox);
 				YEARcomboBox.repaint();
 				
-				JButton checkIT = new JButton("¬d¸ß");
+				JButton checkIT = new JButton("æŸ¥è©¢");
 				checkIT.setBackground(SystemColor.controlHighlight);
-				checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkIT.setBounds(377, 84, 80, 31);
 				view.add(checkIT);
 				checkIT.repaint();
@@ -4658,50 +4660,50 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-				putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+				putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				putGradeINTitle.setBounds(210, 37, 106, 23);
 				view.add(putGradeINTitle);
 				putGradeINTitle.repaint();
 				
-				JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoose.setBounds(73, 86, 128, 23);
 				view.add(yearChoose);
 				yearChoose.repaint();
 				
 				JComboBox YEARcomboBox = new JComboBox(yearChoice);
-				YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARcomboBox.setBackground(SystemColor.controlHighlight);
 				YEARcomboBox.setBounds(192, 85, 173, 29);
 				YEARcomboBox.setSelectedIndex(index);
 				view.add(YEARcomboBox);
 				YEARcomboBox.repaint();
 				
-				JButton checkIT = new JButton("¬d¸ß");
+				JButton checkIT = new JButton("æŸ¥è©¢");
 				checkIT.setBackground(SystemColor.controlHighlight);
-				checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkIT.setBounds(377, 84, 80, 31);
 				view.add(checkIT);
 				checkIT.repaint();
 				SetGradeCheckPro check = new SetGradeCheckPro(view, client, account, YEARcomboBox);
 				checkIT.addActionListener(check);
 				
-				JLabel lessonChooooose = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-				lessonChooooose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel lessonChooooose = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+				lessonChooooose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				lessonChooooose.setBounds(73, 129, 128, 23);
 				view.add(lessonChooooose);
 				lessonChooooose.repaint();
 				
 				JComboBox LESSONcomboBox = new JComboBox(allLesson);
-				LESSONcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				LESSONcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				LESSONcomboBox.setBackground(SystemColor.controlHighlight);
 				LESSONcomboBox.setBounds(192, 128, 173, 29);
 				view.add(LESSONcomboBox);
 				LESSONcomboBox.repaint();
 				
-				JButton checkITduck_1 = new JButton("¬d¬İ");
-				checkITduck_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton checkITduck_1 = new JButton("æŸ¥çœ‹");
+				checkITduck_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkITduck_1.setBackground(SystemColor.controlHighlight);
 				checkITduck_1.setBounds(377, 127, 80, 31);
 				view.add(checkITduck_1);
@@ -4773,51 +4775,51 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-				putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+				putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				putGradeINTitle.setBounds(210, 37, 106, 23);
 				view.add(putGradeINTitle);
 				putGradeINTitle.repaint();
 				
-				JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				yearChoose.setBounds(73, 86, 128, 23);
 				view.add(yearChoose);
 				yearChoose.repaint();
 				
 				JComboBox YEARcomboBox = new JComboBox(yearChoice);
-				YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARcomboBox.setBackground(SystemColor.controlHighlight);
 				YEARcomboBox.setBounds(192, 85, 173, 29);
 				YEARcomboBox.setSelectedIndex(index_year);
 				view.add(YEARcomboBox);
 				YEARcomboBox.repaint();
 				
-				JButton checkIT = new JButton("¬d¸ß");
+				JButton checkIT = new JButton("æŸ¥è©¢");
 				checkIT.setBackground(SystemColor.controlHighlight);
-				checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkIT.setBounds(377, 84, 80, 31);
 				view.add(checkIT);
 				checkIT.repaint();
 				SetGradeCheckPro check = new SetGradeCheckPro(view, client, account, YEARcomboBox);
 				checkIT.addActionListener(check);
 				
-				JLabel lessonChooooose = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-				lessonChooooose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel lessonChooooose = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+				lessonChooooose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				lessonChooooose.setBounds(73, 129, 128, 23);
 				view.add(lessonChooooose);
 				lessonChooooose.repaint();
 				
 				JComboBox LESSONcomboBox = new JComboBox(allLesson);
-				LESSONcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				LESSONcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				LESSONcomboBox.setBackground(SystemColor.controlHighlight);
 				LESSONcomboBox.setBounds(192, 128, 173, 29);
 				LESSONcomboBox.setSelectedIndex(index_lesson);
 				view.add(LESSONcomboBox);
 				LESSONcomboBox.repaint();
 				
-				JButton checkITduck_1 = new JButton("¬d¬İ");
-				checkITduck_1.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton checkITduck_1 = new JButton("æŸ¥çœ‹");
+				checkITduck_1.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkITduck_1.setBackground(SystemColor.controlHighlight);
 				checkITduck_1.setBounds(377, 127, 80, 31);
 				view.add(checkITduck_1);
@@ -4826,8 +4828,8 @@ public class GUI extends JFrame{
 				checkITduck_1.addActionListener(read);
 				
 				if (LESSONcomboBox.getSelectedIndex() != 0) {
-					JLabel stuChooooose = new JLabel("½Ğ¿ï¾Ü¾Ç¥Í¡G");
-					stuChooooose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel stuChooooose = new JLabel("è«‹é¸æ“‡å­¸ç”Ÿï¼š");
+					stuChooooose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					stuChooooose.setBounds(73, 172, 128, 23);
 					view.add(stuChooooose);
 					stuChooooose.repaint();
@@ -4839,28 +4841,28 @@ public class GUI extends JFrame{
 						stuList[i+1] = choiceLesson.list.get(i).name;
 					}
 					JComboBox STUcomboBox = new JComboBox(stuList);
-					STUcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					STUcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					STUcomboBox.setBackground(SystemColor.controlHighlight);
 					STUcomboBox.setBounds(192, 171, 173, 29);
 					view.add(STUcomboBox);
 					STUcomboBox.repaint();
 					
-					JLabel GRADEin = new JLabel("½Ğ¿é¤J¦¨ÁZ¡G");
-					GRADEin.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel GRADEin = new JLabel("è«‹è¼¸å…¥æˆç¸¾ï¼š");
+					GRADEin.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					GRADEin.setBounds(73, 215, 128, 23);
 					view.add(GRADEin);
 					GRADEin.repaint();
 					
 					JTextField gradeININ = new JTextField();
 					gradeININ.setHorizontalAlignment(SwingConstants.CENTER);
-					gradeININ.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					gradeININ.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					gradeININ.setBounds(192, 215, 173, 24);
 					view.add(gradeININ);
 					gradeININ.setColumns(10);
 					gradeININ.repaint();
 					
-					JButton INgrade = new JButton("µn¿ı");
-					INgrade.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton INgrade = new JButton("ç™»éŒ„");
+					INgrade.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					INgrade.setBackground(SystemColor.controlHighlight);
 					INgrade.setBounds(279, 262, 153, 31);
 					view.add(INgrade);
@@ -4875,14 +4877,14 @@ public class GUI extends JFrame{
 								view.removeAll();
 								view.repaint();
 							
-								JLabel putGradeINTitle = new JLabel("µn¿ı¦¨ÁZ");
-								putGradeINTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+								JLabel putGradeINTitle = new JLabel("ç™»éŒ„æˆç¸¾");
+								putGradeINTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 								putGradeINTitle.setBounds(210, 37, 106, 23);
 								view.add(putGradeINTitle);
 								putGradeINTitle.repaint();
 								
-								JLabel yearChoose = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-								yearChoose.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+								JLabel yearChoose = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+								yearChoose.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 								yearChoose.setBounds(73, 86, 128, 23);
 								view.add(yearChoose);
 								yearChoose.repaint();
@@ -4901,15 +4903,15 @@ public class GUI extends JFrame{
 					            }
 					            
 								JComboBox YEARcomboBox = new JComboBox(yearChoice);
-								YEARcomboBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+								YEARcomboBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 								YEARcomboBox.setBackground(SystemColor.controlHighlight);
 								YEARcomboBox.setBounds(192, 85, 173, 29);
 								view.add(YEARcomboBox);
 								YEARcomboBox.repaint();
 								
-								JButton checkIT = new JButton("¬d¸ß");
+								JButton checkIT = new JButton("æŸ¥è©¢");
 								checkIT.setBackground(SystemColor.controlHighlight);
-								checkIT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+								checkIT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 								checkIT.setBounds(377, 84, 80, 31);
 								view.add(checkIT);
 								checkIT.repaint();
@@ -4939,14 +4941,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 		
-			JLabel GradeReadStuTitle = new JLabel("¬d¬İ½Òµ{¦¨ÁZ");
-			GradeReadStuTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel GradeReadStuTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹æˆç¸¾");
+			GradeReadStuTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			GradeReadStuTitle.setBounds(185, 15, 155, 23);
 			view.add(GradeReadStuTitle);
 			GradeReadStuTitle.repaint();
 			
-			JLabel year = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-			year.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel year = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+			year.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			year.setBounds(52, 51, 127, 23);
 			view.add(year);
 			year.repaint();
@@ -4965,14 +4967,14 @@ public class GUI extends JFrame{
             }
 			
 			JComboBox YEARBox = new JComboBox(yearChoice);
-			YEARBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			YEARBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			YEARBox.setBackground(SystemColor.controlHighlight);
 			YEARBox.setBounds(173, 48, 210, 29);
 			view.add(YEARBox);
 			YEARBox.repaint();
 			
-			JButton checkLessonGO = new JButton("¬d¸ß");
-			checkLessonGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton checkLessonGO = new JButton("æŸ¥è©¢");
+			checkLessonGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			checkLessonGO.setBackground(SystemColor.controlHighlight);
 			checkLessonGO.setBounds(401, 47, 77, 29);
 			view.add(checkLessonGO);
@@ -5014,28 +5016,28 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 			
-				JLabel GradeReadStuTitle = new JLabel("¬d¬İ½Òµ{¦¨ÁZ");
-				GradeReadStuTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel GradeReadStuTitle = new JLabel("æŸ¥çœ‹èª²ç¨‹æˆç¸¾");
+				GradeReadStuTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				GradeReadStuTitle.setBounds(185, 15, 155, 23);
 				view.add(GradeReadStuTitle);
 				GradeReadStuTitle.repaint();
 				
-				JLabel year = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				year.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel year = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				year.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				year.setBounds(52, 51, 127, 23);
 				view.add(year);
 				year.repaint();
 								
 				JComboBox YEARBox = new JComboBox(yearChoice);
-				YEARBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARBox.setBackground(SystemColor.controlHighlight);
 				YEARBox.setBounds(173, 48, 210, 29);
 				YEARBox.setSelectedIndex(index);
 				view.add(YEARBox);
 				YEARBox.repaint();
 				
-				JButton checkLessonGO = new JButton("¬d¸ß");
-				checkLessonGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton checkLessonGO = new JButton("æŸ¥è©¢");
+				checkLessonGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				checkLessonGO.setBackground(SystemColor.controlHighlight);
 				checkLessonGO.setBounds(401, 47, 77, 29);
 				view.add(checkLessonGO);
@@ -5068,21 +5070,21 @@ public class GUI extends JFrame{
 						allLesson[0] = " ";
 					}
 					
-					JLabel lesson = new JLabel("½Ğ¿ï¾Ü½Òµ{¡G");
-					lesson.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+					JLabel lesson = new JLabel("è«‹é¸æ“‡èª²ç¨‹ï¼š");
+					lesson.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 					lesson.setBounds(52, 88, 127, 23);
 					view.add(lesson);
 					lesson.repaint();
 					
 					JComboBox LESSONBox = new JComboBox(allLesson);
-					LESSONBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					LESSONBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					LESSONBox.setBackground(SystemColor.controlHighlight);
 					LESSONBox.setBounds(173, 87, 210, 29);
 					view.add(LESSONBox);
 					LESSONBox.repaint();
 					
-					JButton readITlessonGO = new JButton("¬d¬İ");
-					readITlessonGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+					JButton readITlessonGO = new JButton("æŸ¥çœ‹");
+					readITlessonGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 					readITlessonGO.setBackground(SystemColor.controlHighlight);
 					readITlessonGO.setBounds(401, 88, 77, 29);
 					view.add(readITlessonGO);
@@ -5093,7 +5095,7 @@ public class GUI extends JFrame{
 								JTextArea ViewArea = new JTextArea();
 								String wordToprint = client.findLessonGrade(yearChoice[YEARBox.getSelectedIndex()], allLesson[LESSONBox.getSelectedIndex()]);
 								ViewArea.setText(wordToprint);
-								ViewArea.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 14));
+								ViewArea.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 14));
 								ViewArea.setBounds(65, 114, 386, 193);
 								view.add(ViewArea);
 								ViewArea.setEditable(false);
@@ -5130,14 +5132,14 @@ public class GUI extends JFrame{
 			view.removeAll();
 			view.repaint();
 			
-			JLabel GradeTXTTitle = new JLabel("²£¥Í¦¨ÁZ³æ");
-			GradeTXTTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+			JLabel GradeTXTTitle = new JLabel("ç”¢ç”Ÿæˆç¸¾å–®");
+			GradeTXTTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 			GradeTXTTitle.setBounds(192, 100, 137, 23);
 			view.add(GradeTXTTitle);
 			GradeTXTTitle.repaint();
 			
-			JLabel year = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-			year.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+			JLabel year = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+			year.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 			year.setBounds(109, 155, 128, 23);
 			view.add(year);
 			year.repaint();
@@ -5156,14 +5158,14 @@ public class GUI extends JFrame{
             }
             
 			JComboBox YEARBox = new JComboBox(yearChoice);
-			YEARBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			YEARBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			YEARBox.setBackground(SystemColor.controlHighlight);
 			YEARBox.setBounds(228, 154, 173, 29);
 			view.add(YEARBox);
 			YEARBox.repaint();
 			
-			JButton OutTXT = new JButton("²£¥Í¦¨ÁZ³æ");
-			OutTXT.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+			JButton OutTXT = new JButton("ç”¢ç”Ÿæˆç¸¾å–®");
+			OutTXT.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 			OutTXT.setBackground(SystemColor.controlHighlight);
 			OutTXT.setBounds(279, 236, 153, 31);
 			view.add(OutTXT);
@@ -5205,14 +5207,14 @@ public class GUI extends JFrame{
 				view.removeAll();
 				view.repaint();
 				
-				JLabel GradeReadStuTitle = new JLabel("¬d¬İ¦¨ÁZ");
-				GradeReadStuTitle.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 24));
+				JLabel GradeReadStuTitle = new JLabel("æŸ¥çœ‹æˆç¸¾");
+				GradeReadStuTitle.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 24));
 				GradeReadStuTitle.setBounds(185, 15, 155, 23);
 				view.add(GradeReadStuTitle);
 				GradeReadStuTitle.repaint();
 				
-				JLabel year = new JLabel("½Ğ¿ï¾Ü¾Ç´Á¡G");
-				year.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 20));
+				JLabel year = new JLabel("è«‹é¸æ“‡å­¸æœŸï¼š");
+				year.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 20));
 				year.setBounds(99, 80, 127, 23);
 				view.add(year);
 				year.repaint();
@@ -5231,14 +5233,14 @@ public class GUI extends JFrame{
 	            }
 	            
 				JComboBox YEARBox = new JComboBox(yearChoice);
-				YEARBox.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				YEARBox.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				YEARBox.setBackground(SystemColor.controlHighlight);
 				YEARBox.setBounds(220, 80, 210, 29);
 				view.add(YEARBox);
 				YEARBox.repaint();
 				
-				JButton readITstuGO = new JButton("¬d¬İ");
-				readITstuGO.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 18));
+				JButton readITstuGO = new JButton("æŸ¥çœ‹");
+				readITstuGO.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 18));
 				readITstuGO.setBackground(SystemColor.controlHighlight);
 				readITstuGO.setBounds(273, 311, 127, 31);
 				view.add(readITstuGO);
@@ -5252,7 +5254,7 @@ public class GUI extends JFrame{
 								
 								JTextArea ViewArea = new JTextArea();
 								ViewArea.setText(wordToprint);
-								ViewArea.setFont(new Font("·L³n¥¿¶ÂÅé", Font.PLAIN, 14));
+								ViewArea.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.PLAIN, 14));
 								ViewArea.setBounds(65, 114, 386, 193);
 								view.add(ViewArea);
 								ViewArea.setEditable(false);
