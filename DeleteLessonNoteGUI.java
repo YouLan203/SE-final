@@ -54,7 +54,7 @@ public class DeleteLessonNoteGUI extends JFrame {
 				JLabel note = new JLabel("退選失敗！");
 				note.setFont(new Font("微軟正黑體", Font.PLAIN, 20));
 				note.setBounds(150, 55, 387, 23);
-				contentPane.add(note);
+				contentPane.add(note,0);
 				
 				JButton colseButton = new JButton("確認");
 				colseButton.setBackground(SystemColor.controlHighlight);
