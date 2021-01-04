@@ -2,7 +2,7 @@ package finalProject;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Manager { //ºŞ²z­û
+public class Manager { //ç®¡ç†å“¡
 	String account;
 	String password;
 	String identity;
@@ -13,7 +13,7 @@ public class Manager { //ºŞ²z­û
 		this.identity = identity;
 	}
 	
-	public boolean buildFile() { //«ØÀÉ_OK
+	public boolean buildFile() { //å»ºæª”_OK
 		try {
 			String fileName = this.account;
 			String path = "C:\\StudentGradeSystem\\AccountFile\\" + fileName +".txt";
@@ -36,14 +36,14 @@ public class Manager { //ºŞ²z­û
 		return false;
 	}
 	
-	public boolean deleteFile() { //§R°£ÀÉ®×_OK
+	public boolean deleteFile() { //åˆªé™¤æª”æ¡ˆ_OK
 		String fileName = this.account;
 		String path = "C:\\StudentGradeSystem\\AccountFile\\" + fileName +".txt";
 		File newFile = new File(path);
 		return newFile.delete();
 	}
 	
-	public boolean changeFile() { //­×§ï±K½X_OK
+	public boolean changeFile() { //ä¿®æ”¹å¯†ç¢¼_OK
 		String fileName = this.account;
 		String path = "C:\\StudentGradeSystem\\AccountFile\\" + fileName +".txt";
 		String word =   this.account + "\n" +
@@ -61,7 +61,7 @@ public class Manager { //ºŞ²z­û
 		return false;
 	}
 	
-	public Professor readProFileID(String id) { //¾É¤J±Ğ±Â¸ê®Æ_OK
+	public Professor readProFileID(String id) { //å°å…¥æ•™æˆè³‡æ–™_OK
 		String fileName = id;
 		String path = "C:\\StudentGradeSystem\\AccountFile\\" + fileName +".txt";
 		try {
@@ -96,7 +96,7 @@ public class Manager { //ºŞ²z­û
 		return null;
 	}
 	
-	public Professor readProFile(String name) { //¾É¤J±Ğ±Â¸ê®Æ_OK
+	public Professor readProFile(String name) { //å°å…¥æ•™æˆè³‡æ–™_OK
 		String folderPath = "C:\\StudentGradeSystem\\AccountFile\\";
 		File folder = new File(folderPath);
         File[] AccountList = folder.listFiles();
@@ -132,7 +132,7 @@ public class Manager { //ºŞ²z­û
         }
         return null;
 	}
-	public Student readStuFileID(String id) { //¾É¤J¾Ç¥Í¸ê®Æ_OK
+	public Student readStuFileID(String id) { //å°å…¥å­¸ç”Ÿè³‡æ–™_OK
 		String fileName = id;
 		String path = "C:\\StudentGradeSystem\\AccountFile\\" + fileName +".txt";
 		try {
@@ -168,7 +168,7 @@ public class Manager { //ºŞ²z­û
 		return null;
 	}
 	
-	public Student readStuFile(String name) { //¾É¤J¾Ç¥Í¸ê®Æ_OK
+	public Student readStuFile(String name) { //å°å…¥å­¸ç”Ÿè³‡æ–™_OK
 		String folderPath = "C:\\StudentGradeSystem\\AccountFile\\";
 		File folder = new File(folderPath);
         File[] AccountList = folder.listFiles();
@@ -206,8 +206,14 @@ public class Manager { //ºŞ²z­û
         return null;
 	}
 	
-	public boolean buildLessonFile(Lesson lessonName, String year, Professor pro) { //«Ø¥ß½Òµ{
-		lessonName.buildLessonFile();
+	public boolean buildLessonFile(Lesson lessonName, String year, Professor pro) { //å»ºç«‹èª²ç¨‹
+		if (pro == null) {
+			return false;
+		}
+		boolean check = lessonName.buildLessonFile();
+		if(!check) {
+			return false;
+		}
 		if (pro.lesson.isEmpty()) {
 			ArrayList<ArrayList<String>> allLesson = new ArrayList<ArrayList<String>>();
 			ArrayList<String> newlesson = new ArrayList<String>();
@@ -241,7 +247,7 @@ public class Manager { //ºŞ²z­û
 		}
 	}
 	
-	public boolean deleteLessonFile(String year, String lessonName, Professor pro) { //§R°£½Òµ{_OK
+	public boolean deleteLessonFile(String year, String lessonName, Professor pro) { //åˆªé™¤èª²ç¨‹_OK
 		Lesson lesson = this.findLessonData(year, lessonName);
 		ArrayList<StudentGrade> stuList= lesson.list;
 		for (int j = 0; j < stuList.size(); j++) {
@@ -279,7 +285,7 @@ public class Manager { //ºŞ²z­û
 		}
 	}
 	
-	public Lesson findLessonData(String year, String name) { //¬d¸ß½Òµ{_OK
+	public Lesson findLessonData(String year, String name) { //æŸ¥è©¢èª²ç¨‹_OK
 		String fileName = name;
 		String folderName = year;
 		String path = "C:\\StudentGradeSystem\\LessonFile\\" + folderName + "\\" + fileName + ".txt";
@@ -319,7 +325,7 @@ public class Manager { //ºŞ²z­û
 		return null;
 	}
 	
-	public String[] showAllLesson(String year) { //¨Ì¾Ç´Á¦C¥X©Ò¦³½Òµ{_«İ¨ÌGUI­×§ï
+	public String[] showAllLesson(String year) { //ä¾å­¸æœŸåˆ—å‡ºæ‰€æœ‰èª²ç¨‹_å¾…ä¾GUIä¿®æ”¹
 		String folderPath = "C:\\StudentGradeSystem\\LessonFile\\" + year + "\\";
 		try{
 			ArrayList<String> lessonList = new ArrayList<String>();
@@ -349,7 +355,7 @@ public class Manager { //ºŞ²z­û
         }
 	}
 	
-	public boolean chooseLesson(Lesson lesson, Student name) { //¿ï½Ò_OK
+	public boolean chooseLesson(Lesson lesson, Student name) { //é¸èª²_OK
 		lesson.list.add(new StudentGrade(name.name, "00"));
 		lesson.changeLessonFile();
 		if (name.lesson.isEmpty()) {
@@ -389,7 +395,7 @@ public class Manager { //ºŞ²z­û
 		}
 	}
 	
-	public boolean removeLesson(Lesson lesson, Student name) { //°h¿ï
+	public boolean removeLesson(Lesson lesson, Student name) { //é€€é¸
 		int index = lesson.list.indexOf(new StudentGrade(name.name, " "));
 		lesson.list.remove(index);
 		ArrayList<String> place = new ArrayList<String>();
@@ -404,7 +410,7 @@ public class Manager { //ºŞ²z­û
 		return name.lesson.get(x).remove(lesson.lessonName) && lesson.changeLessonFile() && name.changeFile();
 	}
 	
-	public String studentAverage(String year, Student name) { //Á`¥­§¡­pºâ¡]¨Ì¤H¡^_OK
+	public String studentAverage(String year, Student name) { //ç¸½å¹³å‡è¨ˆç®—ï¼ˆä¾äººï¼‰_OK
 		int sum = 0;
 		ArrayList<String> list = new ArrayList<String>();
 		for (int i = 0; i < name.lesson.size(); i++) {
@@ -416,7 +422,7 @@ public class Manager { //ºŞ²z­û
 		}
 		String average;
 		if (list.size() <= 1) {
-			average = "¡Ğ¡Ğ";
+			average = "ï¼ï¼";
 			return average;
 		}
 		else {
@@ -431,7 +437,7 @@ public class Manager { //ºŞ²z­û
 		}
 	}
 	
-	public String findStudentGrade(Student name, String year){ //¦¨ÁZ¾ã²z¡]¨Ì¤H¡^_OK
+	public String findStudentGrade(Student name, String year){ //æˆç¸¾æ•´ç†ï¼ˆä¾äººï¼‰_OK
 		ArrayList<String> myLessonGrade = new ArrayList<String>();
 		ArrayList<String> list = new ArrayList<String>();
 		for (int i = 0; i < name.lesson.size(); i++) {
@@ -444,12 +450,12 @@ public class Manager { //ºŞ²z­û
 		if (list.size() == 0) {
 			return null;
 		}
-		String word = "\t" + name.name + year + "ªº¦¨ÁZ\n";
+		String word = "\t" + name.name + year + "çš„æˆç¸¾\n";
 		for (int j = 1; j < list.size(); j++) {
 			Lesson lessonName = this.findLessonData(year, list.get(j));
 			String mygrade = lessonName.findStudentGrade(name.name);
 			String[] grade = mygrade.split(" ");
-			word += "\t" + lessonName.lessonName + "\t" + grade[1] + "¤À\n";
+			word += "\t" + lessonName.lessonName + "\t" + grade[1] + "åˆ†\n";
 			myLessonGrade.add(word);
 			word = "";
 		}
@@ -457,30 +463,30 @@ public class Manager { //ºŞ²z­û
 		for (int k = 0; k < myLessonGrade.size(); k++) {
 			allWord += myLessonGrade.get(k);
 		}
-		myLessonGrade.add("Á`¥­§¡¡G" + this.studentAverage("1091", name));
+		myLessonGrade.add("ç¸½å¹³å‡ï¼š" + this.studentAverage("1091", name));
 		return allWord;
 	}
 	
-	public String findLessonGrade(String year, String name){ //¦¨ÁZ¾ã²z¡]¨Ì½Òµ{¡^_OK
+	public String findLessonGrade(String year, String name){ //æˆç¸¾æ•´ç†ï¼ˆä¾èª²ç¨‹ï¼‰_OK
 		Lesson lesson = this.findLessonData(year, name);
 		String lessonGrade = lesson.findGrade();
 		return lessonGrade;
 	}
 	
-	public boolean setGrade(Lesson lesson, String name, String grade) { //¦¨ÁZµn¿ı_OK
+	public boolean setGrade(Lesson lesson, String name, String grade) { //æˆç¸¾ç™»éŒ„_OK
 		ArrayList<StudentGrade> list = lesson.list;
 		int place = list.indexOf(new StudentGrade(name, ""));
 		list.get(place).grade = grade;
 		return lesson.changeLessonFile();
 	}
 	
-	public boolean buildTranscript(String year, Student name) { //¦¨ÁZ³æ²£¥Í_OK
+	public boolean buildTranscript(String year, Student name) { //æˆç¸¾å–®ç”¢ç”Ÿ_OK
 		String fileNameCheck = "C:\\StudentGradeSystem\\AccountFile\\" + name.account + ".txt";
 		File checkFile = new File(fileNameCheck);
 		if (!checkFile.exists()) {
 			return false;
 		}
-		String word ="\t\t" + year + name.name + "ªº¦¨ÁZ³æ\n";
+		String word ="\t\t" + year + name.name + "çš„æˆç¸¾å–®\n";
 		ArrayList<String> list = new ArrayList<String>();
 		for (int i = 0; i < name.lesson.size(); i++) {
 			ArrayList<String> getData = name.lesson.get(i);
@@ -496,11 +502,11 @@ public class Manager { //ºŞ²z­û
 			Lesson lesson = this.findLessonData(year, list.get(j));
 			String[] grade = lesson.findStudentGrade(name.name).split(" ");
 			word += "\t\t" + lesson.lessonName + "\t"+
-					grade[1] + "¤À\n";
+					grade[1] + "åˆ†\n";
 		}
-		word += "\t\tÁ`¥­§¡¡G" + this.studentAverage(year, name);
+		word += "\t\tç¸½å¹³å‡ï¼š" + this.studentAverage(year, name);
 		try {
-			String fileName = name.name + year + "ªº¦¨ÁZ³æ";
+			String fileName = name.name + year + "çš„æˆç¸¾å–®";
 			File newFile = new File("C:\\StudentGradeSystem\\GradeFile\\" + fileName +".txt");
 			if (!newFile.exists()) {
 				newFile.createNewFile();
